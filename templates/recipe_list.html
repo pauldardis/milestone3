@@ -14,7 +14,7 @@
 					<div class="card-body">
 						<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
 						<p class="card-text"></p>
-						<!-- <a href="/recipe_list/" class="btn btn-primary">Recipe</a> -->
+						<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}" class="btn btn-primary">Recipe</a>
 					</div>
 				</div>
 			</div>
@@ -27,7 +27,7 @@
 				<div class="card-body">
 					<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
 					<p class="card-text"></p>
-					<!-- <a href="/recipe_list/" class="btn btn-primary">Recipe</a> -->
+					<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}" class="btn btn-primary">Recipe</a>
 				</div>
 			</div>
 		</div>

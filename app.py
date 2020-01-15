@@ -23,7 +23,17 @@ def get_tasks():
     return render_template("recipe_list.html", 
                             recipe_data=mongo.db.recipe_data.find())
 
-# @app.route('')
+@app.route('/get_recipe/<recipe_id>')
+def about_recipe_details(recipe_id):
+    the_recipe = mongo.db.recipe_data.find_one({"_id: ObjectID":(recipe_id)})
+    return render_template('recipe_details.html', recipe=the_recipe)
+
+
+    for obj in data:
+        if obj["url"] == _id:
+            name1 = obj
+    return render_template("recipe_details.html",  recipe_data=mongo.db.recipe_data.find())
+
 
 
 
