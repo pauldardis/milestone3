@@ -1,2 +1,3 @@
 YOUR-FILE-WITH-SENSITIVE-DATA
 env.py
+__pycache__/env.cpython-37.pyc

@@ -2,25 +2,47 @@
 {% block content %}
 
 
-   
-    <ul class="collapsible" data-collapsible="accordion">
-        {% for task in recipe_data %}
-        <li>
-            <div class="collapsible-header">
-            
 
-            </div>
-            <div class="task_header col s9">
-                    <strong>{{task.category_name}}</strong> - {{task.recipe_name}}
-                    <img src="{{task.recipe_image}}" alt="Girl in a jacket">
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <span>
-                    {{task.task_description}}
-                </span>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="container">
+	{% for task in recipe_data %}
+	<div>
+		{% if loop.index % 2 != 0 %}
+		<div>
+			<div class="col-md-6 col-lg-4 col-xl-4">
+				<div class="card recipy_card">
+					<img src="{{task.recipe_image}}" class="card-img-top" alt="recipe image">
+					<div class="card-body">
+						<h2 class="card-title">{{ loop.index}}. {{task.recipe_name}}</h2>
+						<p class="card-text"></p>
+						<a href="#" class="btn ntn-primary">Recipe</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% else %}
+		<div class="col-md-6 col-lg-4 col-xl-4">
+			<div class="card recipy_card">
+				<img src="{{task.recipe_image}}" class="card-img-top" alt="recipe image">
+				<div class="card-body">
+					<h2 class="card-title">{{ loop.index}}. {{task.recipe_name}}</h2>
+					<p class="card-text"></p>
+					<a href="#" class="btn ntn-primary">Recipe</a>
+				</div>
+			</div>
+		</div>
+
+		{% endif %}
+	</div>
+	{% if loop.index != 13 %}
+
+	{%endif %}
+
+
+	{% endfor %}
+
+
+</div>
+
+
 {% endblock %}
