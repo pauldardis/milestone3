@@ -4,17 +4,17 @@
 
 
 <div class="container">
-	{% for task in recipe_data %}
+	{% for recipe in recipe_data %}
 	<div>
 		{% if loop.index % 2 != 0 %}
 		<div>
 			<div class="col-md-6 col-lg-4 col-xl-4">
 				<div class="card recipy_card">
-					<img src="{{task.recipe_image}}" class="card-img-top" alt="recipe image">
+					<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
 					<div class="card-body">
-						<h2 class="card-title">{{ loop.index}}. {{task.recipe_name}}</h2>
+						<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
 						<p class="card-text"></p>
-						<a href="#" class="btn ntn-primary">Recipe</a>
+						<!-- <a href="/recipe_list/" class="btn btn-primary">Recipe</a> -->
 					</div>
 				</div>
 			</div>
@@ -23,11 +23,11 @@
 		{% else %}
 		<div class="col-md-6 col-lg-4 col-xl-4">
 			<div class="card recipy_card">
-				<img src="{{task.recipe_image}}" class="card-img-top" alt="recipe image">
+				<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
 				<div class="card-body">
-					<h2 class="card-title">{{ loop.index}}. {{task.recipe_name}}</h2>
+					<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
 					<p class="card-text"></p>
-					<a href="#" class="btn ntn-primary">Recipe</a>
+					<!-- <a href="/recipe_list/" class="btn btn-primary">Recipe</a> -->
 				</div>
 			</div>
 		</div>

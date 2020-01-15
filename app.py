@@ -18,11 +18,12 @@ else:
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_tasks')
+@app.route('/get_recipe')
 def get_tasks():
     return render_template("recipe_list.html", 
                             recipe_data=mongo.db.recipe_data.find())
 
+# @app.route('')
 
 
 
