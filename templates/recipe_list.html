@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+   
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for task in recipe_data %}
+        <li>
+            <div class="collapsible-header">
+            
+
+            </div>
+            <div class="task_header col s9">
+                    <strong>{{task.category_name}}</strong> - {{task.recipe_name}}
+                    <img src="{{task.recipe_image}}" alt="Girl in a jacket">
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{task.task_description}}
+                </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
