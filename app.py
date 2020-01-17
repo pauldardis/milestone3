@@ -31,7 +31,7 @@ def about_recipe_details(recipe_id):
     return render_template('recipe_details.html', recipe=the_recipe)
 
 
-  
+
 
 
 

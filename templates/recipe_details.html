@@ -1,10 +1,123 @@
 {% extends 'base.html'%}
 {% block content %}
+
+<div class="row">
+	<div class="leftcolumn">
+		<div class="card">
+
+			<img src="{{recipe.recipe_image}}" alt="recipe image">
+
+			<h1>{{recipe.recipe_name}}</h1>
+			<div class="row">
+				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
+					<div class="recipe-icon-container">
+						<i class="far fa-clock fa-3x"></i>
+					</div>
+					<div class="recipe-info-text-container">
+						<div>
+							<strong>PREP TIME</strong>
+						</div>
+						<div>
+							<strong>{{recipe.preparation_time}}</strong>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
+					<div class="recipe-icon-container">
+						<i class="far fa-clock fa-3x"></i>
+					</div>
+					<div class="recipe-info-text-container">
+						<div>
+							<strong>COOK TIME</strong>
+						</div>
+						<div>
+							<strong>{{recipe.cooking_time}}</strong>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
+					<div class="recipe-icon-container">
+						<i class="fa fa-puzzle-piece fa-3x"></i>
+					</div>
+					<div class="recipe-info-text-container">
+						<div>
+							<strong>DIFFICULTY</strong>
+						</div>
+						<div>
+							<strong>{{recipe.difficulty_rating}}</strong>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
+					<div class="recipe-icon-container">
+						<i class="fa fa-thumbs-o-up fa-3x"></i>
+					</div>
+					<div class="recipe-info-text-container">
+						<div>
+							<strong>LIKE RATING</strong>
+						</div>
+						<div>
+							<strong>{{recipe.like_rating}}</strong>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<hr>
+			<div class="mod-buttons">
+					<button type="button" class="btn  btn-warning">Edit Recipe</button>
+					<button type="button" class="btn  btn-danger">Delete Recipe</button>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<div class="card">
+			<h2>TITLE HEADING</h2>
+			<h5>Title description, Sep 2, 2017</h5>
+			<div class="fakeimg" style="height:200px;">Image</div>
+			<p>Some text..</p>
+			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+				eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation
+				ullamco.</p>
+		</div>
+	</div>
+	<div class="rightcolumn">
+		<div class="card">
+			<h2>About Me</h2>
+			<div class="fakeimg" style="height:100px;">Image</div>
+			<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+		</div>
+		<div class="card">
+			<h3>Popular Post</h3>
+			<div class="fakeimg">Image</div><br>
+			<div class="fakeimg">Image</div><br>
+			<div class="fakeimg">Image</div>
+		</div>
+		<div class="card">
+			<h3>Follow Me</h3>
+			<p>Some text..</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
 <h1>this is a test</h1>
 
 <h1>{{recipe._id}}</h1>
 
-<h1>{{recipe._id}}</h1>
+<h1>{{recipe.preparation_time}}</h1>
 
 <h1>{{recipe.authors_name}}</h1>
 
