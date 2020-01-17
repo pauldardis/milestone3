@@ -65,8 +65,8 @@
 
 			<hr>
 			<div class="mod-buttons">
-					<button type="button" class="btn  btn-warning">Edit Recipe</button>
-					<button type="button" class="btn  btn-danger">Delete Recipe</button>
+				<button type="button" class="btn  btn-warning">Edit Recipe</button>
+				<button type="button" class="btn  btn-danger">Delete Recipe</button>
 			</div>
 
 		</div>
@@ -77,16 +77,49 @@
 
 
 		<div class="card">
-			<h2>TITLE HEADING</h2>
-			<h5>Title description, Sep 2, 2017</h5>
-			<div class="fakeimg" style="height:200px;">Image</div>
-			<p>Some text..</p>
-			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-				eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-				exercitation
-				ullamco.</p>
+			<div class="fakeimg1" ;">
+				<h2>Ingredients</h2>
+				<div class="recipe-ingredients-headings">
+					<div>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_1}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_2}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_3}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_4}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_5}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_6}}</h3>
+                        <h3 class="ingredient_tick_box_container">{{recipe.ingredients_7}}</h3>
+                        <h3 class="ingredient_tick_box_container">{{recipe.ingredients_8}}</h3>
+					</div>
+				</div>
+			</div>
 		</div>
+        	<div class="card">
+			<div class="fakeimg1" ;">
+				<h2>Instructions</h2>
+				<div class="recipe-ingredients-headings">
+					<div>
+						<h3 class="ingredient_tick_box_container">{{recipe.method_step_1}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.method_step_2}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.method_step_3}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.method_step_4}}</h3>
+						<h3 class="ingredient_tick_box_container">{{recipe.method_step_5}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="card my-4">
+						<h2 class="card-header">Leave a Comment:</h2>
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+
 	</div>
 	<div class="rightcolumn">
 		<div class="card">
@@ -113,19 +146,6 @@
 
 
 
-<h1>this is a test</h1>
-
-<h1>{{recipe._id}}</h1>
-
-<h1>{{recipe.preparation_time}}</h1>
-
-<h1>{{recipe.authors_name}}</h1>
-
-<h1>{{recipe.category_name}}</h1>
-
-<h1>{{recipe.difficulty_rating}}</h1>
-
-<h1>{{recipe._id}}</h1>
 
 
 
