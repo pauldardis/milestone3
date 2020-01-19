@@ -5,10 +5,10 @@
 
 <div class="container">
 	{% for recipe in recipe_data %}
-	<div>
+	<div >
 		{% if loop.index % 2 != 0 %}
 		<div>
-			<div class="col-md-6 col-lg-4 col-xl-4">
+			<div class="card-deck col-md-6 col-lg-4 col-xl-4">
 				<div class="card recipy_card">
 					<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
 					<div class="card-body">
@@ -21,7 +21,7 @@
 		</div>
 
 		{% else %}
-		<div class="col-md-6 col-lg-4 col-xl-4">
+		<div class="card-deck col-md-6 col-lg-4 col-xl-4">
 			<div class="card recipy_card">
 				<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
 				<div class="card-body">
