@@ -61,20 +61,26 @@ body {
 }
 
 
-.ingredient_tick_box_container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
+.recipe-details {
+display: inline-block;
+padding: 0px;
+ }
+
+
+.recipe-details-card {
+     float: left;
+ }
+.ingredient_details {
   margin-bottom: 12px;
-  cursor: pointer;
-  font-size: small;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  margin-top: 12px;
+  font-size: medium;
 }
 
-
+.instructions_details {
+      margin-bottom: 12px;
+  margin-top: 12px;
+  font-size: medium;
+}
 
 
 /* Create two unequal columns that floats next to each other */
@@ -102,7 +108,7 @@ body {
 .card {
    background-color: white;
    padding: 20px;
-   margin-top: 20px;
+   /* margin-top: 20px; */
 }
 
 /* Clear floats after the columns */
@@ -126,4 +132,11 @@ body {
     width: 100%;
     padding: 0;
   }
+}
+
+.recipy_img {
+        max-height:500px;
+    max-width:500px;
+    height:auto;
+    width:auto;
 }

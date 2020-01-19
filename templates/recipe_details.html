@@ -5,7 +5,7 @@
 	<div class="leftcolumn">
 		<div class="card">
 
-			<img src="{{recipe.recipe_image}}" alt="recipe image">
+			<img src="{{recipe.recipe_image}}" class="recipy_img" alt="recipe image">
 
 			<h1>{{recipe.recipe_name}}</h1>
 			<div class="row">
@@ -75,52 +75,68 @@
 
 
 
-
-		<div class="card">
-			<div class="fakeimg1" ;">
-				<h2>Ingredients</h2>
-				<div class="recipe-ingredients-headings">
-					<div>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_1}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_2}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_3}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_4}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_5}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.ingredients_6}}</h3>
-                        <h3 class="ingredient_tick_box_container">{{recipe.ingredients_7}}</h3>
-                        <h3 class="ingredient_tick_box_container">{{recipe.ingredients_8}}</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-        	<div class="card">
-			<div class="fakeimg1" ;">
-				<h2>Instructions</h2>
-				<div class="recipe-ingredients-headings">
-					<div>
-						<h3 class="ingredient_tick_box_container">{{recipe.method_step_1}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.method_step_2}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.method_step_3}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.method_step_4}}</h3>
-						<h3 class="ingredient_tick_box_container">{{recipe.method_step_5}}</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-
-        <div class="card my-4">
-						<h2 class="card-header">Leave a Comment:</h2>
-						<div class="card-body">
-							<form>
-								<div class="form-group">
-									<textarea class="form-control" rows="3"></textarea>
-								</div>
-								<button type="submit" class="btn btn-primary">Submit</button>
-							</form>
+		<div class="card-deck">
+			<div class="card recipe-details-card ">
+				<div class="">
+					<h2>Ingredients</h2>
+					<div class="recipe-ingredients-headings">
+						<div>
+							<h3 class="ingredient_details">{{recipe.ingredients_1}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_2}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_3}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_4}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_5}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_6}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_7}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_8}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_9}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_10}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_11}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_12}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_13}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_14}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_15}}</h3>
+							<h3 class="ingredient_details">{{recipe.ingredients_16}}</h3>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="card recipe-details-card ">
+				<div class="">
+					<h2>Instructions</h2>
+					<div class="recipe-ingredients-headings">
+						<div>
+							<h3 class="instructions_details">{{recipe.method_step_1}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_2}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_3}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_4}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_5}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_6}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_7}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_8}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_9}}</h3>
+							<h3 class="instructions_details">{{recipe.method_step_10}}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+
+		<div class="card my-4">
+			<h2 class="">Leave a Comment:</h2>
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
 	</div>
+
+
 	<div class="rightcolumn">
 		<div class="card">
 			<h2>About Me</h2>
