@@ -31,6 +31,31 @@ def about_recipe_details(recipe_id):
     return render_template('recipe_details.html', recipe=the_recipe)
 
 
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template ('addrecipe.html', 
+                            categories=mongo.db.recipe_data.find())
+
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipe_data = mongo.db.recipe_data
+    recipe_data.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipe'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe =  mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
