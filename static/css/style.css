@@ -141,5 +141,23 @@ padding: 0px;
     width:auto;
 }
 
-.form-box {
+.form-boxxxxxxxx {
     width: 600px;}
+
+.ingredients-form-box {
+border: none;
+width: 200px;
+background-color: rgb(218, 218, 240);
+padding-top: 3px;
+}
+
+.instructions-form-box {
+border: none;
+width: 100%;
+
+background-color: rgb(218, 218, 240);
+padding-top: 5px;
+padding-bottom: 5px;
+
+}
+
