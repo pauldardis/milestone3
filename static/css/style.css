@@ -160,3 +160,42 @@ padding-bottom: 5px;
 
 }
 
+
+
+.error-code {
+   margin-bottom: 20px;
+  color: #facf5a;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 90px;
+  font-weight: 800;
+}
+
+
+
+/* Error page styling start */
+
+.error-text {
+    color: #455d7a;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.error-text-small {
+    color: #455d7a;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+.error-button {
+    background-color: #facf5a;
+    color: #455d7a;
+    /* display:  inline-block; */
+    justify-content: center;
+    font-family: 'Raleway';
+}
+
+/* Error page styling end */
