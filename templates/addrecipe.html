@@ -4,10 +4,9 @@
 
 <div class="row">
 	<div class="container">
-    		<form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
-
+		<form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
 			<div class="container card">
-            <h1>Edit Recipe</h1>
+				<h1>Edit Recipe</h1>
 				<div class="row">
 					<div class="input-field col s12">
 						<label for="icon_prefix">Recipe Name </label>
@@ -41,160 +40,35 @@
 			</div>
 
 			<div class="container card">
-				<h2>Ingredients</h2>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_1" id="ingredients_1"  class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_2" id="ingredients_2" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_3" id="ingredients_3" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_4" id="ingredients_4" class="ingredients-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_5" id="ingredients_5" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_6" id="ingredients_6" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_7" id="ingredients_7" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_8" id="ingredients_8" class="ingredients-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_9" id="ingredients_9" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_10" id="ingredients_10" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_11" id="ingredients_11" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_12" id="ingredients_12" class="ingredients-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_13" id="ingredients_13" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_14" id="ingredients_14" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_15" id="ingredients_15" class="ingredients-form-box"></textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_16" id="ingredients_16" class="ingredients-form-box"></textarea>
+				<div class="form-row" id="ingredients-details">
+					<div class="form-group col-12">
+						<h2>Ingredients</h2>
+						<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+                        <input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+                        <input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+						<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+						<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
 				</div>
 			</div>
 
 
 			<div class="container card">
-				<h2>Instructions</h2>
-				<div class="row">
-					<div class="input-field col s12">
-						<label class="">Step 1</label>
-						<textarea name="method_step_1" id="method_step_1" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label  class="">Step 2</label>
-						<textarea name="method_step_2" id="method_step_2" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 3</label>
-						<textarea name="method_step_3" id="method_step_3" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 4</label>
-						<textarea name="method_step_4" id="method_step_4" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 5</label>
-						<textarea name="method_step_5" id="method_step_5" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 6</label>
-						<textarea name="method_step_6" id="method_step_6" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 7</label>
-						<textarea name="method_step_7" id="method_step_7" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 8</label>
-						<textarea name="method_step_8" id="method_step_8" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 9</label>
-						<textarea name="method_step_9" id="method_step_9" class="instructions-form-box"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Step 10</label>
-						<textarea name="method_step_10" id="method_step_10" class="instructions-form-box"></textarea>
+				<div class="form-row" id="method_steps-details">
+					<div class="form-group col-12">
+						<h2>Instructions</h2>
+						<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+                        <input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+                        <input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+                        <input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+						<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
 				</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div class="row">
+				<div class="">
 					<button class="btn btn-primary" type="submit" name="action">Submit</button>
+					<button class="btn btn-primary" type="submit" name="action">Cancel</button>
 
 				</div>
 		</form>

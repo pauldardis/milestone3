@@ -40,7 +40,17 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipe_data = mongo.db.recipe_data
-    recipe_data.insert_one(request.form.to_dict())
+    recipe_data.insert_one(  {
+        'recipe_name':request.form.get('recipe_name'),
+        'authors_name':request.form.get('authors_name'),
+        'recipe_image': request.form.get('recipe_image'),
+        'preparation_time': request.form.get('preparation_time'),
+        'cooking_time':request.form.get('cooking_time'),
+        'difficulty_rating':request.form.get('difficulty_rating'),
+        'ingredients':request.form.getlist('ingredient'),
+        'method_steps':request.form.getlist('method_step')        
+        })
+        
     return redirect(url_for('get_recipe'))
 
 
