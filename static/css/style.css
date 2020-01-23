@@ -160,7 +160,7 @@ padding-bottom: 5px;
 
 }
 
-
+/* Error page styling start */
 
 .error-code {
    margin-bottom: 20px;
@@ -170,10 +170,6 @@ padding-bottom: 5px;
   font-size: 90px;
   font-weight: 800;
 }
-
-
-
-/* Error page styling start */
 
 .error-text {
     color: #455d7a;
