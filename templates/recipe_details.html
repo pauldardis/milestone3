@@ -66,7 +66,33 @@
 			<hr>
 			<div class="mod-buttons">
 				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit Recipe</a>
-				<button  type="button" class="btn  btn-danger">Delete Recipe</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete</button>
+               
+                				
+                                
+                <div class="modal" id="DeleteModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title">Warning you are about to delete a recipe</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<!-- Modal body -->
+							<div class="modal-body">
+								<p>Hi this is a test website which is being graded please do not maliciously delete any recipies</p>
+							</div>
+							<!-- Modal footer -->
+							<div class="modal-footer">
+                            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" type="button" class="btn   btn-danger">Delete Recipe</a>
+								<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+							</div>
+						</div>
+					</div>
+                </div>
+
+
+                
 			</div>
 
 		</div>
