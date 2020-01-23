@@ -65,12 +65,13 @@
 
 			<hr>
 			<div class="mod-buttons">
-				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit Recipe</a>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete</button>
-               
-                				
-                                
-                <div class="modal" id="DeleteModal">
+				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit
+					Recipe</a>
+				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete</button>
+
+
+
+				<div class="modal" id="DeleteModal">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<!-- Modal Header -->
@@ -80,19 +81,21 @@
 							</div>
 							<!-- Modal body -->
 							<div class="modal-body">
-								<p>Hi this is a test website which is being graded please do not maliciously delete any recipies</p>
+								<p>Hi this is a test website which is being graded please do not maliciously delete any
+									recipies</p>
 							</div>
 							<!-- Modal footer -->
 							<div class="modal-footer">
-                            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" type="button" class="btn   btn-danger">Delete Recipe</a>
+								<a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" type="button"
+									class="btn   btn-danger">Delete Recipe</a>
 								<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
 							</div>
 						</div>
 					</div>
-                </div>
+				</div>
 
 
-                
+
 			</div>
 
 		</div>
@@ -106,6 +109,17 @@
 				<div class="">
 					<h2>Ingredients</h2>
 					<div class="recipe-ingredients-headings">
+						<div>
+							<!--iterates through theallergens array and displays one at a time-->
+								{% for ingredient in recipe.ingredients %}
+								<h3 class="ingredient_details">{{ingredient}} </h3>
+								{% endfor %}
+						</div>
+<!-- 
+
+
+
+
 						<div>
 							<h3 class="ingredient_details">{{recipe.ingredients_1}}</h3>
 							<h3 class="ingredient_details">{{recipe.ingredients_2}}</h3>
@@ -123,7 +137,7 @@
 							<h3 class="ingredient_details">{{recipe.ingredients_14}}</h3>
 							<h3 class="ingredient_details">{{recipe.ingredients_15}}</h3>
 							<h3 class="ingredient_details">{{recipe.ingredients_16}}</h3>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
