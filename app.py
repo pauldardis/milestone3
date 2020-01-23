@@ -110,6 +110,22 @@ def delete_recipe(recipe_id):
     return redirect(url_for('get_recipe'))
 
 
+# Error Page Section
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template("404.html")
+
+
+@app.errorhandler(403)
+def not_found(error):
+    return render_template("403.html")
+
+@app.errorhandler(500)
+def not_found(error):
+    return render_template("500.html")
+
+
 
 
 
