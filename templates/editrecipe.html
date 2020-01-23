@@ -4,10 +4,10 @@
 
 <div class="row">
 	<div class="container">
-    		<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+		<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
 
 			<div class="container card">
-            <h1>Edit Recipe</h1>
+				<h1>Edit Recipe</h1>
 				<div class="row">
 					<div class="input-field col s12">
 						<label for="icon_prefix">Recipe Name </label>
@@ -40,81 +40,20 @@
 				</div>
 			</div>
 
-			<div class="container card">
-				<h2>Ingredients</h2>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_1" id="ingredients_1"  class="ingredients-form-box">{{recipe.ingredients_1}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_2" id="ingredients_2" class="ingredients-form-box">{{recipe.ingredients_2}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_3" id="ingredients_3" class="ingredients-form-box">{{recipe.ingredients_3}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_4" id="ingredients_4" class="ingredients-form-box">{{recipe.ingredients_4}}</textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_5" id="ingredients_5" class="ingredients-form-box">{{recipe.ingredients_5}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_6" id="ingredients_6" class="ingredients-form-box">{{recipe.ingredients_6}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_7" id="ingredients_7" class="ingredients-form-box">{{recipe.ingredients_7}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_8" id="ingredients_8" class="ingredients-form-box">{{recipe.ingredients_8}}</textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_9" id="ingredients_9" class="ingredients-form-box">{{recipe.ingredients_9}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_10" id="ingredients_10" class="ingredients-form-box">{{recipe.ingredients_10}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_11" id="ingredients_11" class="ingredients-form-box">{{recipe.ingredients_11}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_12" id="ingredients_12" class="ingredients-form-box">{{recipe.ingredients_12}}</textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_13" id="ingredients_13" class="ingredients-form-box">{{recipe.ingredients_13}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_14" id="ingredients_14" class="ingredients-form-box">{{recipe.ingredients_14}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_15" id="ingredients_15" class="ingredients-form-box">{{recipe.ingredients_15}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label ></label>
-						<textarea name="ingredients_16" id="ingredients_16" class="ingredients-form-box">{{recipe.ingredients_16}}</textarea>
-					</div>
+			<div class="form-row" id="ingredients-details">
+				<div class="form-group col-12">
+					<label for="ingredients">Ingredients: </label>
+					{% for ingredient in recipe.ingredients %}
+					<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+                {% endfor %}
+					<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+					<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i>
+          </button>
 				</div>
 			</div>
+
+
 
 
 			<div class="container card">
