@@ -9,6 +9,17 @@ $(document).ready(function() {
     $(".remove-input-btn").on("click", function() {
         $("#ingredients-details input:last").remove();
     });
+
+       /* Dynamically add new ingredient input field in recipe forms*/
+    $(".new-method-btn").on("click", function() {
+        $('<input type="text" class="form-control ingredient" name="method_step" id="method_step" placeholder="Add new step here" required >').insertBefore(".new-method-btn");
+    });
+    
+    /*removes last input element in ingredient list*/
+    $(".remove-method-btn").on("click", function() {
+        $("#method_steps-details input:last").remove();
+    });
+   
    
    
 });

@@ -74,6 +74,7 @@ def update_recipe(recipe_id):
         'cooking_time':request.form.get('cooking_time'),
         'difficulty_rating':request.form.get('difficulty_rating'),
         'ingredients':request.form.getlist('ingredient'),
+        'method_steps':request.form.getlist('method_step'),
         'method_step_1':request.form.get('method_step_1'),
         'method_step_2':request.form.get('method_step_2'),
         'method_step_3':request.form.get('method_step_3'),
