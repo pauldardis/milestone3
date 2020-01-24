@@ -66,6 +66,8 @@ def insert_recipe():
 
 
 
+
+
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe =  mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
@@ -103,6 +105,34 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipe_data.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipe'))
+
+
+
+# @app.route('/update_comment/<recipe_id>', methods=["POST"])
+# def update_comment(recipe_id):
+#     recipe_data = mongo.db.recipe_data
+#     recipe_data.update( {'_id': ObjectId(recipe_id)},
+#     {
+#         # 'recipe_name':request.form.get('recipe_name'),
+#         # 'authors_name':request.form.get('authors_name'),
+#         # 'recipe_image': request.form.get('recipe_image'),
+#         # 'preparation_time': request.form.get('preparation_time'),
+#         # 'cooking_time':request.form.get('cooking_time'),
+#         # 'difficulty_rating':request.form.get('difficulty_rating'),
+#         # 'ingredients':request.form.getlist('ingredient'),
+#         # 'method_steps':request.form.getlist('method_step'),
+#         # 'like_rating':request.form.get('like_rating'),
+#         'comment':request.form.getlist('comment')
+#     })
+#     return redirect(url_for('get_recipe'))
+
+
+
+
+
+
+
+
 
 
 # Error Page Section
