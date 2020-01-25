@@ -124,7 +124,7 @@ def insert_comment(recipe_id):
     flash('Your comment has been recorded ')
 
     return redirect(url_for('about_recipe_details',
-                    _anchor='comments-section', 
+                    _anchor='comments', 
                     recipe_id=recipe_id))
 
    
