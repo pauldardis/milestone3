@@ -138,12 +138,19 @@
 		<div class="card my-4">
 			<h2 class="">Leave a Comment:</h2>
 			<div class="card-body">
-				<!-- <form action="{{ url_for('update_comment', recipe_id=recipe._id) }}" method="POST" class="col s12"> -->
+				<form action="{{ url_for('insert_comment', anchor='comments-section', recipe_id=recipe._id) }}" method="POST" class="col s12">
 					
 						<div class="form-group">
-						<textarea name="comment" id="comment" class="form-box">{{recipe.comment}}</textarea>
+						<textarea name="comment" id="comment" class="form-box"></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <h3>{{ message}}</h3>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
 				</form>
 			</div>
 		</div>

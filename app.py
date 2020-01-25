@@ -1,7 +1,7 @@
 import os
 import env
 
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -12,10 +12,16 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get('DATABASE')
 if os.path.exists("env.py"):
     app.config["MONGO_URI"] = env.mongo_uri
+    app.config['SECRET_KEY'] = env.SECRET_KEY
 else:
     app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 mongo = PyMongo(app)
+
+
+
+
 
 @app.route('/')
 @app.route('/get_recipe')
@@ -108,26 +114,20 @@ def delete_recipe(recipe_id):
 
 
 
-# @app.route('/update_comment/<recipe_id>', methods=["POST"])
-# def update_comment(recipe_id):
-#     recipe_data = mongo.db.recipe_data
-#     recipe_data.update( {'_id': ObjectId(recipe_id)},
-#     {
-#         # 'recipe_name':request.form.get('recipe_name'),
-#         # 'authors_name':request.form.get('authors_name'),
-#         # 'recipe_image': request.form.get('recipe_image'),
-#         # 'preparation_time': request.form.get('preparation_time'),
-#         # 'cooking_time':request.form.get('cooking_time'),
-#         # 'difficulty_rating':request.form.get('difficulty_rating'),
-#         # 'ingredients':request.form.getlist('ingredient'),
-#         # 'method_steps':request.form.getlist('method_step'),
-#         # 'like_rating':request.form.get('like_rating'),
-#         'comment':request.form.getlist('comment')
-#     })
-#     return redirect(url_for('get_recipe'))
+@app.route('/insert_comment/<recipe_id>', methods=["POST",'GET'])
+def insert_comment(recipe_id):
+    comments = mongo.db.comments
+    comments.insert_one({
+        'comment': request.form['comment'],
+        'recipe_id': ObjectId(recipe_id)
+    })
+    flash('Your comment has been recorded ')
 
+    return redirect(url_for('about_recipe_details',
+                    _anchor='comments-section', 
+                    recipe_id=recipe_id))
 
-
+   
 
 
 
