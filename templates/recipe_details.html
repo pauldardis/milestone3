@@ -162,33 +162,20 @@
      		<div class="card">
 			<h2>Recipe Comments</h2>
 
-		{% for comment  in comments %}
+		{% for comments  in comments %}
 
-			{% if loop.index % 2 != 0 %}
-
-			<div class="fakeimg">
+			<div class="comments_container">
 				<i class="fas fa-quote-left"></i>
-				<h2>{{comments.comment}}</h2>
+				<h4 class="comments_text">{{comments.comment}}</h4>
 				<i class="fas fa-quote-right"></i>
 			</div><br>
-
-		{% else %}
-			<div class="fakeimg">
-				<i class="fas fa-quote-left"></i>
-				<h2>{{comments.comment}}</h2>
-				<i class="fas fa-quote-right"></i>
-			</div><br>
-
-
-		{% endif %}
-
-       
+      
 
         {% endfor %}
          </div>
 
 
-				<div class="card">
+				<!-- <div class="card">
 					<h2>Spare Card</h2>
 					<div class="fakeimg" style="height:100px;">Image</div>
 					<h2></h2>
@@ -199,7 +186,7 @@
 					<p>Some text..</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 
 

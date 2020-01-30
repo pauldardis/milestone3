@@ -33,7 +33,7 @@ def get_recipe():
 
 @app.route('/get_recipe/<recipe_id>')
 def about_recipe_details(recipe_id):
-    the_comments = mongo.db.comments.find({"recipe_id": ObjectId(recipe_id)})
+    the_comments = mongo.db.comments_data.find({"recipe_id": ObjectId(recipe_id)})
 
     the_recipe = mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
     return render_template('recipe_details.html', recipe=the_recipe, comments=the_comments)
@@ -118,7 +118,7 @@ def delete_recipe(recipe_id):
 
 @app.route('/insert_comment/<recipe_id>', methods=["POST",'GET'])
 def insert_comment(recipe_id):
-    comments = mongo.db.comments
+    comments = mongo.db.comments_data
     comments.insert_one({
         'comment': request.form['comment'],
         'recipe_id': ObjectId(recipe_id)
