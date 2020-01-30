@@ -100,6 +100,7 @@ def update_recipe(recipe_id):
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
+    mongo.db.comments_data.remove({"recipe_id": ObjectId(recipe_id)})
     mongo.db.recipe_data.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipe'))
 
@@ -113,9 +114,6 @@ def insert_comment(recipe_id):
         'recipe_id': ObjectId(recipe_id)
     })
     flash('Your comment has been recorded ')
-
-    
-
     return redirect(url_for('about_recipe_details',
                     recipe_id=recipe_id
                     ))
