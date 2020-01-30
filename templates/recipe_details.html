@@ -159,33 +159,47 @@
 
 
 	<div class="rightcolumn">
-
-    		<div class="card">
+     		<div class="card">
 			<h2>Recipe Comments</h2>
+
+		{% for comment  in comments %}
+
+			{% if loop.index % 2 != 0 %}
+
 			<div class="fakeimg">
 				<i class="fas fa-quote-left"></i>
 				<h2>{{comments.comment}}</h2>
 				<i class="fas fa-quote-right"></i>
 			</div><br>
+
+		{% else %}
 			<div class="fakeimg">
 				<i class="fas fa-quote-left"></i>
 				<h2>{{comments.comment}}</h2>
 				<i class="fas fa-quote-right"></i>
 			</div><br>
-		</div>
 
-		<div class="card">
-			<h2>Spare Card</h2>
-			<div class="fakeimg" style="height:100px;">Image</div>
-			<h2></h2>
-		</div>
 
-			<div class="card">
-				<h3>Spare Card</h3>
-				<p>Some text..</p>
+		{% endif %}
+
+       
+
+        {% endfor %}
+         </div>
+
+
+				<div class="card">
+					<h2>Spare Card</h2>
+					<div class="fakeimg" style="height:100px;">Image</div>
+					<h2></h2>
+				</div>
+
+				<div class="card">
+					<h3>Spare Card</h3>
+					<p>Some text..</p>
+				</div>
 			</div>
 		</div>
-	</div>
 
 
 
@@ -198,4 +212,4 @@
 
 
 
-	{% endblock %}
+		{% endblock %}
