@@ -67,7 +67,8 @@
 		
 				<div class="">
 					<button class="btn btn-primary" type="submit" name="action">Submit</button>
-                    <button class="btn btn-primary" type="submit" name="action">Cancel</button>
+                    <a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
+                    
 
 				</div>
 		</form>

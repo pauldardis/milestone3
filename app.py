@@ -20,9 +20,6 @@ else:
 mongo = PyMongo(app)
 
 
-
-
-
 @app.route('/')
 @app.route('/get_recipe')
 def get_recipe():
@@ -95,19 +92,11 @@ def update_recipe(recipe_id):
         'difficulty_rating':request.form.get('difficulty_rating'),
         'ingredients':request.form.getlist('ingredient'),
         'method_steps':request.form.getlist('method_step'),
-        'method_step_1':request.form.get('method_step_1'),
-        'method_step_2':request.form.get('method_step_2'),
-        'method_step_3':request.form.get('method_step_3'),
-        'method_step_4':request.form.get('method_step_4'),
-        'method_step_5':request.form.get('method_step_5'),
-        'method_step_6':request.form.get('method_step_6'),
-        'method_step_7':request.form.get('method_step_7'),
-        'method_step_8':request.form.get('method_step_8'),
-        'method_step_9':request.form.get('method_step_9'),
-        'method_step_10':request.form.get('method_step_10'),
         'like_rating':request.form.get('like_rating')
     })
-    return redirect(url_for('get_recipe'))
+    return redirect(url_for('about_recipe_details',
+                    recipe_id=recipe_id
+                    ))
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
@@ -128,8 +117,6 @@ def insert_comment(recipe_id):
     
 
     return redirect(url_for('about_recipe_details',
-                    # This is not working so not displaying the page is correct location leading to bad UX
-                    # _anchor='comments', 
                     recipe_id=recipe_id
                     ))
 
