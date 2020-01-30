@@ -20,6 +20,9 @@ $(document).ready(function() {
         $("#method_steps-details input:last").remove();
     });
    
+    
+
+
    
    
 });

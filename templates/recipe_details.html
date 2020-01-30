@@ -4,10 +4,10 @@
 <div class="row">
 	<div class="leftcolumn">
 		<div class="card">
-
-			<img src="{{recipe.recipe_image}}" class="recipy_img" alt="recipe image">
-
-			<h1>{{recipe.recipe_name}}</h1>
+			<div class="recipe_img_container">
+				<img src="{{recipe.recipe_image}}" class="recipy_img" alt="recipe image">
+				<h1 class="recipe_name">{{recipe.recipe_name}}</h1>
+			</div>
 			<div class="row">
 				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
 					<div class="recipe-icon-container">
@@ -48,16 +48,17 @@
 						</div>
 					</div>
 				</section>
+
 				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
 					<div class="recipe-icon-container">
-						<i class="fa fa-thumbs-o-up fa-3x"></i>
+						<button class="print_button" onclick="myFunction()"><i  class="fas fa-print fa-3x"></i></button>
 					</div>
 					<div class="recipe-info-text-container">
 						<div>
-							<strong>LIKE RATING</strong>
+							<strong>PRINT</strong>
 						</div>
 						<div>
-							<strong>{{recipe.like_rating}}</strong>
+							<strong> .</strong>
 						</div>
 					</div>
 				</section>
@@ -65,8 +66,7 @@
 
 			<hr>
 			<div class="mod-buttons">
-				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit
-					Recipe</a>
+				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit Recipe</a></button>
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete</button>
 
 
@@ -81,7 +81,8 @@
 							</div>
 							<!-- Modal body -->
 							<div class="modal-body">
-								<p>Hi this is a test website which is being graded please do not maliciously delete any
+								<p>Hi this is a test website which is being graded please do not maliciously delete
+									any
 									recipies</p>
 							</div>
 							<!-- Modal footer -->
@@ -138,14 +139,13 @@
 		<div class="card my-4">
 			<h2 class="">Leave a Comment:</h2>
 			<div class="card-body">
-				<form action="{{ url_for('insert_comment', recipe_id=recipe._id) }}" method="POST"
-					class="col s12">
+				<form action="{{ url_for('insert_comment', recipe_id=recipe._id) }}" method="POST" class="col s12">
 
 					<div class="form-group">
 						<textarea name="comment"  id="comment" class="form-box col-12" rows="4" ></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
-                    <a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
+					<a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
 					{% with messages = get_flashed_messages() %}
 					{% if messages %}
 					{% for message in messages %}
@@ -159,24 +159,24 @@
 	</div>
 
 
-	<div class="rightcolumn">
-     		<div class="card">
-			<h2>Recipe Comments</h2>
+	<div class=" rightcolumn">
+						<div class="card">
+							<h2>Recipe Comments</h2>
 
-		{% for comments  in comments %}
+							{% for comments  in comments %}
 
-			<div class="comments_container">
-				<i class="fas fa-quote-left"></i>
-				<h4 class="comments_text">{{comments.comment}}</h4>
-				<i class="fas fa-quote-right"></i>
-			</div><br>
-      
+							<div class="comments_container">
+								<i class="fas fa-quote-left"></i>
+								<h4 class="comments_text">{{comments.comment}}</h4>
+								<i class="fas fa-quote-right"></i>
+							</div><br>
+
 
         {% endfor %}
          </div>
 
 
-				<!-- <div class="card">
+							<!-- <div class="card">
 					<h2>Spare Card</h2>
 					<div class="fakeimg" style="height:100px;">Image</div>
 					<h2></h2>
@@ -194,10 +194,14 @@
 
 
 
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
 
 
 
 
 
-
-		{% endblock %}
+							{% endblock %}

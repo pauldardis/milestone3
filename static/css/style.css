@@ -27,6 +27,27 @@ body {
   width: 100%;
   padding: 20px;
 }
+
+.recipe_img_container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe_name {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    }
+
+.print_button {
+    border-style: none;
+    background-color: white;
+}
+
+
+
+
 .recipy_card {
     /* width: 300px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
