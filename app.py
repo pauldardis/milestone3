@@ -33,8 +33,10 @@ def get_recipe():
 
 @app.route('/get_recipe/<recipe_id>')
 def about_recipe_details(recipe_id):
+    the_comments = mongo.db.comments.find_one({"recipe_id": ObjectId(recipe_id)})
+
     the_recipe = mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('recipe_details.html', recipe=the_recipe)
+    return render_template('recipe_details.html', recipe=the_recipe, comments=the_comments)
 
 
 @app.route('/add_recipe')
