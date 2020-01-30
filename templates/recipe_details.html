@@ -4,10 +4,10 @@
 <div class="row">
 	<div class="leftcolumn">
 		<div class="card">
-			<div class="recipe_img_container">
-				<img src="{{recipe.recipe_image}}" class="recipy_img" alt="recipe image">
-				<h1 class="recipe_name">{{recipe.recipe_name}}</h1>
-			</div>
+				
+					<img src="{{recipe.recipe_image}}" class="recipy_img " alt="recipe image">
+					<h1 class="recipe_name">{{recipe.recipe_name}}</h1>
+			
 			<div class="row">
 				<section class="col-md-3 col-sm-6 col-xm-6 recipe-info-container">
 					<div class="recipe-icon-container">
@@ -66,7 +66,8 @@
 
 			<hr>
 			<div class="mod-buttons">
-				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit Recipe</a></button>
+				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn  btn-warning">Edit
+					Recipe</a></button>
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">Delete</button>
 
 
@@ -142,7 +143,7 @@
 				<form action="{{ url_for('insert_comment', recipe_id=recipe._id) }}" method="POST" class="col s12">
 
 					<div class="form-group">
-						<textarea name="comment"  id="comment" class="form-box col-12" rows="4" ></textarea>
+						<textarea name="comment"  id="comment" class="form-box col-12 " rows="4"  required="required" data-error="Valid email is required."></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					<a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
@@ -162,6 +163,7 @@
 	<div class=" rightcolumn">
 						<div class="card">
 							<h2>Recipe Comments</h2>
+                            <hr>
 
 							{% for comments  in comments %}
 
@@ -169,7 +171,7 @@
 								<i class="fas fa-quote-left"></i>
 								<h4 class="comments_text">{{comments.comment}}</h4>
 								<i class="fas fa-quote-right"></i>
-							</div><br>
+							</div><hr>
 
 
         {% endfor %}
@@ -194,11 +196,11 @@
 
 
 
-<script>
-function myFunction() {
+							<script>
+								function myFunction() {
   window.print();
 }
-</script>
+							</script>
 
 
 
