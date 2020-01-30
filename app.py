@@ -123,9 +123,13 @@ def insert_comment(recipe_id):
     })
     flash('Your comment has been recorded ')
 
+    
+
     return redirect(url_for('about_recipe_details',
-                    _anchor='comments', 
-                    recipe_id=recipe_id))
+                    # This is not working so not displaying the page is correct location leading to bad UX
+                    # _anchor='comments', 
+                    recipe_id=recipe_id
+                    ))
 
    
 
