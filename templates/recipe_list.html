@@ -2,56 +2,39 @@
 {% block content %}
 
 
-
-<div class="container">
-
-	{% for recipe in recipe_data %}
-	<div class="">
-		{% if loop.index % 2 != 0 %}
-
-		<div class=" col-md-6 col-lg-4 col-xl-4">
-			<div class="card recipy_card">
-				<div class="card-body">
-					<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
+		{% for recipe in recipe_data %}
+		
+			{% if loop.index % 2 != 0 %}
+			<div class=" col-md-6 col-lg-4 col-xl-4">
+				<div class="card recipy_card">
 					<div class="card-body">
-						<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
-						
-						<div class="card-footer">
-							<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}"
-								class="btn btn-primary">Recipe</a>
+						<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
+						<div class="card-body">
+							<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
+							<div class="card-footer">
+								<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}"
+									class="btn btn-primary">Recipe</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		{% else %}
-		<div class=" col-md-6 col-lg-4 col-xl-4">
-			<div class="card recipy_card">
-				<div class="card-body">
-					<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
+			{% else %}
+			<div class=" col-md-6 col-lg-4 col-xl-4">
+				<div class="card recipy_card">
 					<div class="card-body">
-						<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
-						
-						<div class="card-footer">
-							<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}"
-								class="btn btn-primary">Recipe</a>
+						<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
+						<div class="card-body">
+							<h2 class="card-title">{{ loop.index}}. {{recipe.recipe_name}}</h2>
+							<div class="card-footer">
+								<a href="{{url_for('about_recipe_details', recipe_id=recipe._id)}}"
+									class="btn btn-primary">Recipe</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		{% endif %}
-
-		{% if loop.index != 13 %}
-
-		{%endif %}
-
-
-		{% endfor %}
-
-
-	</div>
-
-
-	{% endblock %}
+			{% endif %}
+			{% endfor %}
+		
+{% endblock %}

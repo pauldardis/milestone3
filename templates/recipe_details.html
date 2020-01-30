@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="leftcolumn">
-		<div class="card">
+		<div class="card ">
 				
 					<img src="{{recipe.recipe_image}}" class="recipy_img " alt="recipe image">
 					<h1 class="recipe_name">{{recipe.recipe_name}}</h1>
@@ -143,7 +143,7 @@
 				<form action="{{ url_for('insert_comment', recipe_id=recipe._id) }}" method="POST" class="col s12">
 
 					<div class="form-group">
-						<textarea name="comment"  id="comment" class="form-box col-12 " rows="4"  required="required" data-error="Valid email is required."></textarea>
+						<textarea name="comment"  id="comment" class="form-box col-12 " rows="4"  required="required" ></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					<a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
