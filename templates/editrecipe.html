@@ -7,67 +7,87 @@
 		<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
 			<div class="container card">
 				<h1>Edit Recipe</h1>
-				<div class="row">
-					<div class="input-field col s12">
-						<label for="icon_prefix">Recipe Name </label>
-						<textarea name="recipe_name" id="recipe_name" class="form-box">{{recipe.recipe_name}}</textarea>
+				<div class="form-group col-12">
+					<div class="row">
+						<div class="col-sm-2">
+							<label >Recipe Name:</label>
+						</div>
+						<div class="col-sm-2">
+							<input type="text" name="recipe_name" id="recipe_name" value="{{recipe.recipe_name}}" class="form-box" required="required">
+						</div>
+						<div class="col-sm-2">
+							<label >Authors Name:</label>
+						</div>
+						<div class="col-sm-2">
+							<input type="text" name="authors_name" id="authors_name" class="form-box" value="{{recipe.authors_name}}" required="required" >
+						</div>
+						<div class="col-sm-2">
+							<label >Image Link:</label>
+						</div>
+						<div class="col-sm-2">
+							<input type="url" name="recipe_image" id="recipe_image" class="form-box" value="{{recipe.recipe_image}}" pattern="https?://.+" required="required">
+						</div>
 					</div>
-					<div class="input-field col s12">
-						<label >Authors Name</label>
-						<textarea name="authors_name" id="authors_name" class="form-box">{{recipe.authors_name}}</textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label >Image Link</label>
-						<textarea name="recipe_image" id="recipe_image" class="form-box">{{recipe.recipe_image}}</textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<label > Prep Time</label>
-						<textarea name="preparation_time" id="preparation_time" class="form-box">{{recipe.preparation_time}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label >Cook Time</label>
-						<textarea name="cooking_time" id="cooking_time" class="form-box">{{recipe.cooking_time}}</textarea>
-					</div>
-					<div class="input-field col s12">
-						<label >Difficulity Rating</label>
-						<textarea name="difficulty_rating" id="difficulty_rating" class="form-box">{{recipe.difficulty_rating}}</textarea>
+                    <div class="row">
+                    	<div class="col-sm-2">
+                            <label >Prep Time:</label>
+						</div>
+						<div class="col-sm-2">
+                            <input type="number" name="preparation_time" id="preparation_time" class="form-box" value="{{recipe.preparation_time}}" required="required">
+						</div>
+                        <div class="col-sm-2">
+                            <label >Cook Time:</label>
+						</div>
+						<div class="col-sm-2">
+                            <input type="number" name="cooking_time" id="cooking_time" class="form-box" value="{{recipe.cooking_time}}" required="required">
+						</div>
+                        <div class="col-sm-2">
+                            <label >Difficulity Rating:</label>
+						</div>
+						<div class="col-sm-2">
+                            <select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box" value="{{recipe.difficulty_rating}}" required="required">
+                                    <option value="Easy">Easy</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Hard">Hard</option>
+                             </select>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="container card">
-				<div class="form-row" id="ingredients-details">
-					<div class="form-group col-12">
-						<h2>Ingredients</h2>
-						{% for ingredient in recipe.ingredients %}
-						<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
-                        {% endfor %}
-						<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
-						<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
-					</div>
-				</div>
-			</div>
 
 
-			<div class="container card">
-				<div class="form-row" id="method_steps-details">
-					<div class="form-group col-12">
-						<h2>Instructions</h2>
-						{% for method_step in recipe.method_steps %}
-						<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+
+						<div class="container card">
+							<div class="form-row" id="ingredients-details">
+								<div class="form-group col-12">
+									<h2>Ingredients</h2>
+									{% for ingredient in recipe.ingredients %}
+									<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
                         {% endfor %}
-                        <button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
-						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
-					</div>
-				</div>
-		
-				<div class="">
-					<button class="btn btn-primary" type="submit" name="action">Submit</button>
-                    <a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
+									<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+									<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="container card">
+							<div class="form-row" id="method_steps-details">
+								<div class="form-group col-12">
+									<h2>Instructions</h2>
+									{% for method_step in recipe.method_steps %}
+									<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+                        {% endfor %}
+									<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+									<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
+								</div>
+							</div>
+
+							<div class="">
+								<button class="btn btn-primary" type="submit" name="action">Submit</button>
+								<a class="btn btn-primary"
+									href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
                     
 
 				</div>
