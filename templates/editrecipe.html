@@ -54,43 +54,33 @@
 					</div>
 				</div>
 			</div>
-
-
-
-
-						<div class="container card">
-							<div class="form-row" id="ingredients-details">
-								<div class="form-group col-12">
-									<h2>Ingredients</h2>
-									{% for ingredient in recipe.ingredients %}
-									<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+			<div class="container card">
+				<div class="form-row" id="ingredients-details">
+					<div class="form-group col-12">
+						<h2>Ingredients</h2>
+						{% for ingredient in recipe.ingredients %}
+						<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
                         {% endfor %}
-									<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
-									<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="container card">
-							<div class="form-row" id="method_steps-details">
-								<div class="form-group col-12">
-									<h2>Instructions</h2>
-									{% for method_step in recipe.method_steps %}
-									<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
-                        {% endfor %}
-									<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
-									<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
-								</div>
-							</div>
-
-							<div class="">
-								<button class="btn btn-primary" type="submit" name="action">Submit</button>
-								<a class="btn btn-primary"
-									href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
-                    
-
+						<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+						<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
+					</div>
 				</div>
+			</div>
+            <div class="container card">
+				<div class="form-row" id="method_steps-details">
+					<div class="form-group col-12">
+						<h2>Instructions</h2>
+						{% for method_step in recipe.method_steps %}
+						<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+                        {% endfor %}
+						<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
+						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
+					</div>
+				</div>
+			<div class="">
+					<button class="btn btn-primary" type="submit" name="action">Submit</button>
+					<a class="btn btn-primary" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
+			</div>
 		</form>
 	</div>
 </div>
