@@ -72,7 +72,6 @@ def insert_recipe():
 
 
 
-
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe =  mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
