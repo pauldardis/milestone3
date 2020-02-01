@@ -36,12 +36,12 @@
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 					<li class="nav-item ">
 						<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
-					</li>
-					<li class="nav-item">
+					</li>                
+                    <li class="nav-item">
 						<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
 				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<form class="form-inline my-2 my-lg-0" id="search-form" action="{{url_for('search')}}" method="POST">
+					<input class="form-control mr-sm-2" id="search" name="search_data" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>

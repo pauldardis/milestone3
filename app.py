@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 
+
 if os.path.exists("env.py"):
     import env
 app = Flask(__name__)
@@ -59,6 +60,23 @@ def insert_recipe():
     return redirect(url_for('get_recipe'))
 
 
+
+
+@app.route('/search', methods=['POST'])
+def search():
+    orig_query = request.form.get('search_data')      
+    query = {'$regex': orig_query, "$options": "i" } 
+     
+    results = mongo.db.recipe_data.find({
+        '$or': [
+            {'recipe_name': query},
+            {'ingredients': query},  
+            {'course': query},  
+            {'cuisine': query},  
+            {'difficulty_rating': query}         
+        ]
+    })
+    return render_template('search_results.html', query=orig_query, results=results)
 
 
 
