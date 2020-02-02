@@ -48,7 +48,8 @@ def insert_recipe():
     recipe_data = mongo.db.recipe_data
     recipe_data.insert_one(  {
         'recipe_name':request.form.get('recipe_name'),
-        'authors_name':request.form.get('authors_name'),
+        'cuisine':request.form.get('cuisine'),
+        'course':request.form.get('course'),
         'recipe_image': request.form.get('recipe_image'),
         'preparation_time': request.form.get('preparation_time'),
         'cooking_time':request.form.get('cooking_time'),
@@ -102,14 +103,14 @@ def update_recipe(recipe_id):
     recipe_data.update( {'_id': ObjectId(recipe_id)},
     {
         'recipe_name':request.form.get('recipe_name'),
-        'authors_name':request.form.get('authors_name'),
+        'cuisine':request.form.get('cuisine'),
+        'course':request.form.get('course'),
         'recipe_image': request.form.get('recipe_image'),
         'preparation_time': request.form.get('preparation_time'),
         'cooking_time':request.form.get('cooking_time'),
         'difficulty_rating':request.form.get('difficulty_rating'),
         'ingredients':request.form.getlist('ingredient'),
-        'method_steps':request.form.getlist('method_step'),
-        'like_rating':request.form.get('like_rating')
+        'method_steps':request.form.getlist('method_step') 
     })
     return redirect(url_for('about_recipe_details',
                     recipe_id=recipe_id

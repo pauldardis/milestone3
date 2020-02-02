@@ -9,17 +9,31 @@
 				<h1>Edit Recipe</h1>
 				<div class="form-group col-12">
 					<div class="row">
-						<div class="col-sm-2">
-							<label >Recipe Name:</label>
+						<div class="col-sm-1">
+							<label >Name:</label>
 						</div>
 						<div class="col-sm-2">
 							<input type="text" name="recipe_name" id="recipe_name" value="{{recipe.recipe_name}}" class="form-box" required="required">
 						</div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
+							<label >Course:</label>
+						</div>
+						<div class="col-sm-2">
+							<select type="text" name="course" id="course" class="form-box" required="required">
+                                <option value="{{recipe.course}}">{{recipe.course}}</option>
+                                <option value="Starter">Starter</option>
+                                <option value="Main">Main</option>
+                                <option value="dessert">Dessert</option>
+                            </select>
+						</div>
+
+
+                        <div class="col-sm-1">
                             <label >Cuisine:</label>
 						</div>
 						<div class="col-sm-2">
                                 <select type="text" name="cuisine" id="cuisine" class="form-box" required="required">
+                                    <option value="{{recipe.cuisine}}">{{recipe.cuisine}}</option>
                                     <option value="American">American</option>
                                     <option value="Chinese">Chinese</option>
                                     <option value="French">French</option>
@@ -34,7 +48,7 @@
 									<option value="None">None</option>
                              </select>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-1">
 							<label >Image Link:</label>
 						</div>
 						<div class="col-sm-2">
@@ -42,23 +56,24 @@
 						</div>
 					</div>
                     <div class="row">
-                    	<div class="col-sm-2">
+                    	<div class="col-sm-1">
                             <label >Prep Time:</label>
 						</div>
 						<div class="col-sm-2">
                             <input type="number" name="preparation_time" id="preparation_time" class="form-box" value="{{recipe.preparation_time}}" required="required">
 						</div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <label >Cook Time:</label>
 						</div>
 						<div class="col-sm-2">
                             <input type="number" name="cooking_time" id="cooking_time" class="form-box" value="{{recipe.cooking_time}}" required="required">
 						</div>
-                        <div class="col-sm-2">
-                            <label >Difficulity Rating:</label>
+                        <div class="col-sm-1">
+                            <label >Difficulity:</label>
 						</div>
 						<div class="col-sm-2">
-                            <select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box" value="{{recipe.difficulty_rating}}" required="required">
+                            <select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box" required="required">
+                                    <option value="{{recipe.difficulty_rating}}">{{recipe.difficulty_rating}}</option>
                                     <option value="Basic">Basic</option>
                                     <option value="Intermediate">Intermediate</option>
                                     <option value="Advanced">Advanced</option>

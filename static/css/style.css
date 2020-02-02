@@ -263,10 +263,15 @@ padding-bottom: 5px;
     margin-top: 5px;
 }
 
+.nav-link {
+    font-size: 15px;
+    font-weight:  bold;      
+}
 
 
-
-
+.test-box {
+    float: left;
+}
 
 
 
