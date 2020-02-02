@@ -18,6 +18,13 @@ $(document).ready(function() {
     /*removes last input element in ingredient list*/
     $(".remove-method-btn").on("click", function() {
         $("#method_steps-details input:last").remove();
+    
+
+    
+
+
+
+
     });
    
     

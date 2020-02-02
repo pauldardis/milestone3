@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+		type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,500,700&display=swap" rel="stylesheet">
+
+
+	<!-- this link needs to be changed -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"" type=" text/css" />
+
+
+
+</head>
+
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light nav_colour">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<a class="navbar-brand" href="{{url_for('get_recipe')}}">Navbar</a>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item ">
+						<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
+					</li>                
+                    <li class="nav-item">
+						<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
+				</ul>
+				<form class="form-inline my-2 my-lg-0" id="search-form" action="{{url_for('search')}}" method="POST">
+					<input class="form-control mr-sm-2" id="search" name="search_data" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+
+	<div class="container">
+		{% block content %} {% endblock %}
+	</div>
+
+
+
+
+
+
+
+	<footer class="container">
+			<hr>
+			<div class="text-center center-block">
+				<p class="txt-railway">- This my website -</p>
+				<br />
+				<a
+					href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+				<a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+				<a
+					href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+				<a
+					href="mailto:paul.dardis@bt.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+			</div>
+			<hr>
+	</footer>
+
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+
+</body>
+
+</html>

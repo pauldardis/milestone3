@@ -7,73 +7,151 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
 		type="text/css" />
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,500,700&display=swap" rel="stylesheet">
 
-
-	<!-- this link needs to be changed -->
-	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"" type=" text/css" />
-
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type=" text/css" />
 
 
 </head>
 
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light nav_colour">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-			<a class="navbar-brand" href="{{url_for('get_recipe')}}">Navbar</a>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item ">
-						<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
-					</li>                
-                    <li class="nav-item">
-						<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
-				</ul>
-				<form class="form-inline my-2 my-lg-0" id="search-form" action="{{url_for('search')}}" method="POST">
-					<input class="form-control mr-sm-2" id="search" name="search_data" type="search" placeholder="Search" aria-label="Search">
+
+	<div class="d-flex" id="wrapper">
+
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading">Filter Recipe List </div>
+            <br>
+
+			<div class="list-group list-group-flush">
+				<div class="list-group-item list-group-item-action bg-light">
+					
+					<form action="{{url_for('search')}}" method="POST">
+                    <h5 class="list-group-item-action bg-light">Course</h5>
+						<div class="form-check">
+							<label class="form-check-label" for="radio1">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search"  value="Starter">Starter</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="radio2">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search"   value="Main">Main Course</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label"  for="radio3">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search"   value="Dessert">Dessert</label>
+						</div>
+                        <br>
+                        
+                       <h5 class="list-group-item-action bg-light">Cuisine</h5>
+						<div class="form-check">
+							<label class="form-check-label" for="radio4">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="American">American</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="radio5">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Chinese">Chinese</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="radio7">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Indian">Indian</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="iTALIAN">Italian</label>
+						</div>
+                        <div class="form-check">
+							<label class="form-check-label" for="radio8">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Mediterranean">Mediterranean</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="radio9">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Mexican">Mexican</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Spanish">Spanish</label>
+						</div>
+                        						<div class="form-check">
+							<label class="form-check-label" for="radio10">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Tapas">Tapas</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Thai">Thai</label>
+						</div>
+
+                        <br>                        
+                       <h5 class="list-group-item-action bg-light">Difficulty Level</h5>
+                        <div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Basic">Basic</label>
+						</div>
+                        <div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Intermediate">Intermediate</label>
+						</div>
+                        <div class="form-check">
+							<label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="search" name="search_data" type="search" value="Advanced">Advanced</label>
+						</div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+				</div>
+				<!-- <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+				<a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+				<a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+				<a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+				<a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
+                
+				<form class="list-group-item list-group-item-action bg-light" id="search-form"
+					action="{{url_for('search')}}" method="POST">
+                    <h5 class="list-group-item-action bg-light">Free Text Search</h5>
+					<input class="form-control mr-sm-2  " id="search" name="search_data" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
-		</nav>
-	</header>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+				<button class="btn btn-primary"   id="menu-toggle">Search Menu</button>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
 
-	<div class="container">
-		{% block content %} {% endblock %}
-	</div>
 
 
-
-
-
-
-
-	<footer class="container">
-			<hr>
-			<div class="text-center center-block">
-				<p class="txt-railway">- This my website -</p>
-				<br />
-				<a
-					href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-				<a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-				<a
-					href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-				<a
-					href="mailto:paul.dardis@bt.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+			<div class="container">
+				{% block content %} {% endblock %}
 			</div>
-			<hr>
-	</footer>
 
 
 
@@ -81,10 +159,42 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+			<footer class="container">
+				<hr>
+				<div class="text-center center-block">
+					<p class="txt-railway">- This my website -</p>
+					<br />
+					<a
+						href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+					<a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+					<a
+						href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+					<a
+						href="mailto:paul.dardis@bt.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+				</div>
+				<hr>
+			</footer>
+
+
+
+
+
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+			<script src="vendor/jquery/jquery.min.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+			<!-- Menu Toggle Script -->
+			<script>
+				$("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+			</script>
 
 </body>
 
