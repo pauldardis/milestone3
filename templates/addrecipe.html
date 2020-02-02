@@ -7,30 +7,23 @@
 		<form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
 			<div class="container  card">
 				<h1>Add Recipe</h1>
-				<div class="form-group col-12">
-					<div class="row">
-						<div class="col col-sm-6">
-							<label >Name:</label>
-						</div>
-						<div class="com col-sm-6">
-							<input type="text" name="recipe_name" id="recipe_name" class="form-box test-box" required="required">
-						</div>
-						<div class="col col-sm-6">
-							<label >Course:</label>
-						</div>
-						<div class="col col-sm-6">
-							<select type="text" name="course" id="course" class="form-box test-box" required="required">
+				<div class="form-row">
+					<div class="form-group col-md-3">
+						<label>Recipe Name</label>
+						<input type="text" name="recipe_name" id="recipe_name" class="form-box test-box" required="required">
+                    </div>
+					<div class="form-group col-md-3">
+						<label for="inputPassword4">Course</label>
+						<select type="text" name="course" id="course" class="form-box test-box" required="required">
                                 <option ></option>
                                 <option value="Starter">Starter</option>
                                 <option value="Main">Main</option>
                                 <option value="dessert">Dessert</option>
-                            </select>
-						</div>
-						<div class="col col-sm-6">
-							<label >Cuisine:</label>
-						</div>
-						<div class="col col-sm-6">
-							<select type="text" name="cuisine" id="cuisine" class="form-box test-box" required="required">
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+						<label for="inputPassword4">Cuisine</label>
+						<select type="text" name="cuisine" id="cuisine" class="form-box test-box" required="required">
                                 <option ></option>
                                 <option value="American">American</option>
                                 <option value="Chinese">Chinese</option>
@@ -45,49 +38,33 @@
                                 <option value="Savory">Savory</option>
 								<option value="None">None</option>
                             </select>
-						</div>
-                <div class="form-group col-12">
-                    <div class="row">
-						<div class="col col-sm-6">
-							<label >Image Link:</label>
-						</div>
-                		<div class="col col-sm-6">
-							<input type="url" name="recipe_image" id="recipe_image" class="form-box test-box" pattern="https?://.+" required="required">
-						</div>
-					</div>	
-                </div>
-				<br>
-				<div class="form-group col-12">
-                    <div class="row">
-						<div class="col col-sm-6">
-							<label >Prep Time:</label>
-						</div>
-						<div class="col col-sm-6">
-							<input type="number" name="preparation_time" id="preparation_time" class="form-box test-box" required="required">
-						</div>
-						<div class="col col-sm-6">
-							<label >Cook Time:</label>
-						</div>
-						<div class="col col-sm-6">
-							<input type="number" name="cooking_time" id="cooking_time" class="form-box test-box" required="required">
-						</div>
-						<div class="col col-sm-6">
-								<label >Difficulity</label>
-						</div>
-						<div class="col col-sm-1">
-							<select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box test-box" required="required">
-                                    <option ></option>
-                                    <option value="Basic">Basic</option>
-                                    <option value="Intermediate">Intermediate</option>
-                                    <option value="Advanced">Advanced</option>
-                            </select>
-						</div>
-						</div>
-					</div>
+                    </div>
+                    <div class="form-group col-md-3">
+						<label for="inputPassword4">Difficulity</label>
+						<select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box test-box" required="required">
+                                <option ></option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+						</select>
+                    </div>
+				</div>
+                <div class="form-row">
+					<div class="form-group col-md-6">
+						<label>Image Link</label>
+						<input type="url" name="recipe_image" id="recipe_image" class="form-box test-box" pattern="https?://.+" required="required">
+                    </div>
+					<div class="form-group col-md-3">
+						<label>Prep Time</label>
+						<input type="number" name="preparation_time" id="preparation_time" class="form-box test-box" required="required">
+                    </div>
+                    <div class="form-group col-md-3">
+						<label >Cooking Time</label>
+						<input type="number" name="cooking_time" id="cooking_time" class="form-box test-box" required="required">
+                    </div>
 				</div>
 			</div>
-			</div>
-			<div class="container card">
+            <div class="container card">
 				<div class="form-row" id="ingredients-details">
 					<div class="form-group col-12">
 						<h2>Ingredients</h2>
@@ -111,10 +88,10 @@
 						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
 				</div>
-				<div class="">
-					<button class="btn btn-primary" type="submit" name="action">Submit</button>
-					<button class="btn btn-primary" type="submit" name="action">Cancel</button>
-				</div>
+			    <div>
+				    <button class="btn btn-primary" type="submit" name="action">Submit</button>
+				    <button class="btn btn-primary" type="submit" name="action">Cancel</button>
+			    </div>
 			</div>
 		</form>
 	</div>
