@@ -294,8 +294,9 @@ body {
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+  padding: 1.8rem 1.5rem;
+  padding-bottom: .45rem;
+  font-size: 1.5rem;
 }
 
 #sidebar-wrapper .list-group {
