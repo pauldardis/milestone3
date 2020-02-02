@@ -15,11 +15,24 @@
 						<div class="col-sm-2">
 							<input type="text" name="recipe_name" id="recipe_name" value="{{recipe.recipe_name}}" class="form-box" required="required">
 						</div>
-						<div class="col-sm-2">
-							<label >Authors Name:</label>
+                        <div class="col-sm-2">
+                            <label >Cuisine:</label>
 						</div>
 						<div class="col-sm-2">
-							<input type="text" name="authors_name" id="authors_name" class="form-box" value="{{recipe.authors_name}}" required="required" >
+                                <select type="text" name="cuisine" id="cuisine" class="form-box" required="required">
+                                    <option value="American">American</option>
+                                    <option value="Chinese">Chinese</option>
+                                    <option value="French">French</option>
+                                    <option value="Indian">Indian</option>
+                                    <option value="Italian">Italian</option>
+									<option value="Mediterranean">Mediterranean</option>
+                                    <option value="Mexican">Mexican</option>
+                                    <option value="Spanish">Spanish</option>
+									<option value="Tapas">Tapas</option>
+                                    <option value="Thai">Thai</option>
+                                    <option value="Savory">Savory</option>
+									<option value="None">None</option>
+                             </select>
 						</div>
 						<div class="col-sm-2">
 							<label >Image Link:</label>
