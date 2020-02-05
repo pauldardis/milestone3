@@ -63,7 +63,7 @@ def insert_recipe():
 
 
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods=['POST','GET'])
 def search():
     orig_query = request.form.get('search_data')      
     query = {'$regex': orig_query, "$options": "i" } 
