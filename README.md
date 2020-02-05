@@ -62,6 +62,20 @@ This allows the user to click the print icon it opens the recipe in a new screen
 ## Database
 
 
+| Title  | Database Key |Data Type |
+|--|--|--|
+|Recipe Id | _id | ObjectID|
+| Recipe Name| recipe_name |String |
+| Recipe Course| course | String|
+| Recipe Cuisine|  cuisine| String|
+| Recipe Image| recipe_image |String |
+| Preparation Time| preparation_time|String |
+| Cooking Time |   cooking_time|String |
+| Difficulty Rating  |  difficulty_rating| String|
+| Ingredients  |ingredients  |Array |
+| Method Steps  | method_steps |Array |
+
+
 ## Technologies Used
 
 ### Tools
@@ -145,7 +159,7 @@ The recipes and images used in this website have been copied from [https://www.b
 
 ### Code
 
-I have used bootstarp templates for the following parts of the website Navbar, Footer, Sidebar, Recipe Cards
+I have used bootstrap templates for the following parts of the website Navbar, Footer, Sidebar, Recipe Cards
 
 ### Acknowledgements
 
