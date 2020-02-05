@@ -64,7 +64,7 @@ Recipe data is stored in MongoDB
 
 ### Database collection
 
-recipe_data
+**recipe_data**
 | Title  | Database Key |Data Type |
 |--|--|--|
 |Recipe Id | _id | ObjectID|
@@ -77,9 +77,10 @@ recipe_data
 | Difficulty Rating  |  difficulty_rating| String|
 | Ingredients  |ingredients  |Array |
 | Method Steps  | method_steps |Array |
-__
+|  |  |
 
-comments_data 
+
+**comments_data**
 | Title  | Database Key |Data Type |
 |--|--|--|
 |Comment ID | _id | ObjectID|
