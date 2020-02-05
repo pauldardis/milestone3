@@ -81,6 +81,8 @@ Recipe data is stored in MongoDB
 
 
 **comments_data**
+|  |  |  |
+|--|--|--|
 | Title  | Database Key |Data Type |
 |--|--|--|
 |Comment ID | _id | ObjectID|
@@ -161,7 +163,7 @@ echo web: python app.py > Procfile
 | PORT |5000  |
 | SECRET_KEY | your_secret |
 |MONGO_URI  |  mongodb+srv://root:password@myfirstcluster-vcoqj.mongodb.net/test?retryWrites=true&w=majority|
-----
+
 9. in the “Manual Deployment” section of the page, make sure master branch is selected and then click “Deploy Branch”
 
 ## Credits
