@@ -65,6 +65,7 @@ Recipe data is stored in MongoDB
 ### Database collection
 
 **recipe_data**
+
 | Title        | Database Key          | Data Type  |
 | ------------- |:-------------:| -----:|
 |Recipe Id | _id | ObjectID|
