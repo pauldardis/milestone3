@@ -16,8 +16,7 @@ The purpose of this website to view, add, edit and comment of recipes, the typic
  - As a website user I would like the ability to view all recipes
  - As a website user I would like the ability to easily print a recipe.
  - As a website user I would like to be able to comment on a recipe
-
-<![if !supportLists]>· <![endif]>As a website user I would like to be able to view all comments made on a recipe.
+ - As a website user I would like to be able to view all comments made on a recipe.
 
 ### Wireframes
 
@@ -166,7 +165,7 @@ echo web: python app.py > Procfile
 | IP |  0.0.0.0|
 | PORT |5000  |
 | SECRET_KEY | your_secret |
-|MONGO_URI  |  mongodb+srv://root:password@myfirstcluster-vcoqj.mongodb.net/test?retryWrites=true&w=majority|
+|MONGO_URI  |  mongodb+srv://root:<password>@myfirstcluster-vcoqj.mongodb.net/test?retryWrites=true&w=majority|
 
 9. in the “Manual Deployment” section of the page, make sure master branch is selected and then click “Deploy Branch”
 

@@ -10,12 +10,12 @@ $(document).ready(function() {
         $("#ingredients-details input:last").remove();
     });
 
-       /* Dynamically add new ingredient input field in recipe forms*/
+       /* Dynamically add new method step input field in recipe forms*/
     $(".new-method-btn").on("click", function() {
         $('<input type="text" class="form-control ingredient" name="method_step" id="method_step" placeholder="Add new step here" required >').insertBefore(".new-method-btn");
     });
     
-    /*removes last input element in ingredient list*/
+    /*removes last input element in method step list*/
     $(".remove-method-btn").on("click", function() {
         $("#method_steps-details input:last").remove();
     
