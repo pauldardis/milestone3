@@ -81,13 +81,16 @@ Recipe data is stored in MongoDB
 
 
 **comments_data**
-|  |  |  |
-|--|--|--|
-| Title  | Database Key |Data Type |
-|--|--|--|
+
+| Title        | Database Key          | Data Type  |
+| ------------- |:-------------:| -----:|
 |Comment ID | _id | ObjectID|
 | Comment| comment |String |
 | Recipe Id| recipe_id | ObjectID|
+
+
+
+
 
 
 
