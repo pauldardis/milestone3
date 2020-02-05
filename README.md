@@ -60,8 +60,11 @@ The user also gets a confirmation message that their comment has been posted
 This allows the user to click the print icon it opens the recipe in a new screen and print to the recipe to a printer.
 
 ## Database
+Recipe data is stored in MongoDB
 
+### Database collection
 
+recipe_data
 | Title  | Database Key |Data Type |
 |--|--|--|
 |Recipe Id | _id | ObjectID|
@@ -74,6 +77,15 @@ This allows the user to click the print icon it opens the recipe in a new screen
 | Difficulty Rating  |  difficulty_rating| String|
 | Ingredients  |ingredients  |Array |
 | Method Steps  | method_steps |Array |
+
+
+
+comments_data 
+| Title  | Database Key |Data Type |
+|--|--|--|
+|Comment ID | _id | ObjectID|
+| Comment| comment |String |
+| Recipe Id| recipe_id | ObjectID|
 
 
 ## Technologies Used
