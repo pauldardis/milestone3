@@ -77,8 +77,7 @@ recipe_data
 | Difficulty Rating  |  difficulty_rating| String|
 | Ingredients  |ingredients  |Array |
 | Method Steps  | method_steps |Array |
-
-
+__
 
 comments_data 
 | Title  | Database Key |Data Type |
@@ -86,6 +85,7 @@ comments_data
 |Comment ID | _id | ObjectID|
 | Comment| comment |String |
 | Recipe Id| recipe_id | ObjectID|
+
 
 
 ## Technologies Used
