@@ -31,7 +31,8 @@
 		<!-- Sidebar -->
 		<div class="bg-light border-right" id="sidebar-wrapper">
 			<div class="sidebar-heading"><a class="brand"
-					href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-70.png')}}" alt=""></a></div>
+					href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-70.png')}}" alt=""></a>
+			</div>
 
 			<div class="list-group list-group-flush">
 				<div class="list-group-item list-group-item-action bg-light">
@@ -139,28 +140,26 @@
 
 			<nav class="navbar navbar-expand-lg  navbar-light bg-light border-bottom">
 
-				
 
 
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div  class="navbar-nav justify-content-center ml-autox mt-2x mt-lg-0x">
-                    <a class="nav-link" id="menu-toggle">Search Filter</a>
-        </div>
-					<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-						<ul class="navbar-nav justify-content-center ml-autox mt-2x mt-lg-0x">
-							<li class="nav-item">
-								<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
-							</li>
-						</ul>
-					</div>
 
-
-
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<ul class="navbar-nav justify-content-center ml-autox mt-2x mt-lg-0x">
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="menu-toggle">Recipe Filter</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 
 
