@@ -1,22 +1,24 @@
 
-/* Add a gray background color with some padding */
+
+/* Colour styling start */
+
 body {
-    /* padding-top: 56px; */
-    font-family: Arial;
-    /* padding: 20px; */
-    background: #f1f1f1;
+      background: #EBF2B6;
 }
+
+
+.calm-chaos-1-hex { color: #B6FF75; }
+.color_1 {background: #CDD973;
+
+}
+.calm-chaos-2-hex { color: #81EB0B; }
+.calm-chaos-3-hex { color: #CDFF82; }
+.calm-chaos-4-hex { color: #BEE86B; }
+.calm-chaos-5-hex { color: #DAFF75; }
 
 .nav_colour {
     
     background-color: #2EC4B6
-}
-
-
-
-
-.comments_text {
-    font-style: italic;
 }
 
 .fa-quote-right {
@@ -28,25 +30,35 @@ body {
    color: #facf5a;
   }
 
+  .card-footer {
+    background-color: white;
+    border-color: white;
+}
+
+
+/* Colour styling end */
+
+/* Fonts styling start  */
+.comments_text {
+    font-style: italic;
+}
+
+
+/* Fonts styling end  */
+
+
+
+
+
+
+
 
 
 .comments_container {
-  /* background-color: #aaa; */
   width: 100%;
   padding: 20px;
 }
 
-/* .recipe_img_container {
-   display: block; 
-  margin-left: auto;
-  margin-right: auto; 
-} */
-
-/* .recipe_name {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-    } */
 
 .print_button {
     border-style: none;
@@ -59,20 +71,13 @@ body {
 
 
 .recipy_card {
-    /* width: 300px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-      margin-top: 20px;
+     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 300px;
     max-height: 300px;
 }
-
-.card-footer {
-    background-color: white;
-    border-color: white;
-}
-
 
 .column {
   float: left;
@@ -81,7 +86,6 @@ body {
 
 .recipe-details-item {
   float: left;
-  /* width: 25%; */
 }
 
 .recipe-info-text-container {
@@ -98,9 +102,6 @@ body {
     display: inline-block
 }
 
-
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -142,7 +143,7 @@ padding: 0px;
 }
 
 
-/* Create two unequal columns that floats next to each other */
+
 /* Left column */
 .leftcolumn {   
   float: left;
@@ -156,21 +157,16 @@ padding: 0px;
   padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
 
-/* Add a card effect for articles */
+
+
 .card {
    background-color: white;
    padding: 20px;
    margin-top: 20px;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -185,7 +181,7 @@ padding: 0px;
   margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
@@ -194,17 +190,13 @@ padding: 0px;
 }
 
 .recipy_img {
-      max-height:500px;
+    max-height:500px;
     max-width:500px;
     height:auto;
     width:auto;
-    /* display: block; 
-    margin-left: auto;
-    margin-right: auto; */
-}
+  }
 
-.form-boxxxxxxxx {
-    width: 600px;}
+
 
 .ingredients-form-box {
 border: none;
@@ -251,7 +243,6 @@ padding-bottom: 5px;
 .error-button {
     background-color: #facf5a;
     color: #455d7a;
-    /* display:  inline-block; */
     justify-content: center;
     font-family: 'Raleway';
 }
@@ -325,3 +316,5 @@ body {
     margin-left: -15rem;
   }
 }
+
+/* sidebar configuration  end*/
