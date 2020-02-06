@@ -298,6 +298,16 @@ body {
   padding: 1.8rem 1.5rem;
   padding-bottom: .45rem;
   font-size: 1.5rem;
+   
+}
+
+
+.brand {
+    position: relative;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+
 }
 
 #sidebar-wrapper .list-group {
