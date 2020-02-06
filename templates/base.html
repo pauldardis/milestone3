@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
 	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:200,300,500,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type=" text/css" />
 
@@ -26,8 +26,8 @@
 
 		<!-- Sidebar -->
 		<div class="bg-light border-right" id="sidebar-wrapper">
-			<div class="sidebar-heading">Filter Recipe List </div>
-            <br>
+			<div class="sidebar-heading">Filter Recipe </div>
+            
 			<div class="list-group list-group-flush">
 				<div class="list-group-item list-group-item-action bg-light">
 					
@@ -121,7 +121,7 @@
                 
 				<form class="list-group-item list-group-item-action bg-light" id="search-form"
 					action="{{url_for('search')}}" method="POST">
-                    <h5 class="list-group-item-action bg-light">Free Text Search</h5>
+                    <h5 class="list-group-item-action bg-light">Text Search</h5>
 					<input class="form-control mr-sm-2  " id="search" name="search_data" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 				</form>
@@ -150,6 +150,9 @@
 						</li>
 					</ul>
 				</div>
+                <div>
+                <a  href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-70.png')}}" alt=""></a>
+                </div>
 			</nav>
 
 
@@ -168,7 +171,9 @@
 			<footer class="container">
 				<hr>
 				<div class="text-center  center-block">
-					<p class="txt-railway">- This my website -</p>
+					<div>
+                    <a class="" href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-150.png')}}" alt=""></a>
+                    </div>
 					<br />
 					<a
 						href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
