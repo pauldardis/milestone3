@@ -13,18 +13,18 @@
 						<input type="text" name="recipe_name" id="recipe_name" class="form-box test-box" required="required">
                     </div>
 					<div class="form-group col-md-3">
-						<label for="inputPassword4">Course</label>
-						<select type="text" name="course" id="course" class="form-box test-box" required="required">
-                                <option ></option>
+						<label for="course">Course</label>
+						<select  name="course" id="course" class="form-box test-box" required="required">
+                                <option value="">Select Course </option>
                                 <option value="Starter">Starter</option>
                                 <option value="Main">Main</option>
                                 <option value="dessert">Dessert</option>
                         </select>
                     </div>
                     <div class="form-group col-md-3">
-						<label for="inputPassword4">Cuisine</label>
-						<select type="text" name="cuisine" id="cuisine" class="form-box test-box" required="required">
-                                <option ></option>
+						<label for="cuisine">Cuisine</label>
+						<select  name="cuisine" id="cuisine" class="form-box test-box" required="required">
+                                <option value="">Select Cuisine </option>
                                 <option value="American">American</option>
                                 <option value="Chinese">Chinese</option>
                                 <option value="French">French</option>
@@ -40,9 +40,9 @@
                             </select>
                     </div>
                     <div class="form-group col-md-3">
-						<label for="inputPassword4">Difficulity</label>
-						<select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box test-box" required="required">
-                                <option ></option>
+						<label for="difficulty_rating">Difficulity</label>
+						<select  name="difficulty_rating" id="difficulty_rating" class="form-box test-box" required="required">
+                                <option value="">Select Difficulity</option>
                                 <option value="Basic">Basic</option>
                                 <option value="Intermediate">Intermediate</option>
                                 <option value="Advanced">Advanced</option>
@@ -68,9 +68,9 @@
 				<div class="form-row" id="ingredients-details">
 					<div class="form-group col-12">
 						<h2>Ingredients</h2>
-						<input type="text" class="form-control " name="ingredient" id="ingredient"  required="required" >
-						<input type="text" class="form-control " name="ingredient" id="ingredient"  >
-						<input type="text" class="form-control " name="ingredient" id="ingredient"  >
+						<input type="text" class="form-control " name="ingredient" id="ingredient1"  required="required" >
+						<input type="text" class="form-control " name="ingredient" id="ingredient2"  >
+						<input type="text" class="form-control " name="ingredient" id="ingredient3"  >
 						<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
 						<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
@@ -80,17 +80,17 @@
 				<div class="form-row" id="method_steps-details">
 					<div class="form-group col-12">
 						<h2>Instructions</h2>
-						<input type="text" class="form-control " name="method_step" id="method_step"  required="required" >
-						<input type="text" class="form-control " name="method_step" id="method_step"  >
-						<input type="text" class="form-control " name="method_step" id="method_step"  >
-						<input type="text" class="form-control " name="method_step" id="method_step"  >
+						<input type="text" class="form-control " name="method_step" id="method_step1"  required="required" >
+						<input type="text" class="form-control " name="method_step" id="method_step2"  >
+						<input type="text" class="form-control " name="method_step" id="method_step3"  >
+						<input type="text" class="form-control " name="method_step" id="method_step4"  >
 						<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
 						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
 				</div>
 			    <div>
 				    <button class="btn btn-info" type="submit" name="action">Submit</button>
-				    <button class="btn btn-info" name="cancel" value="cancel" onclick="history.go(-1)"" >Cancel</button>
+				    <button class="btn btn-info" name="cancel" value="cancel" onclick="history.go(-1)" >Cancel</button>
 			    </div>
 			</div>
 		</form>
