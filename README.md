@@ -1,6 +1,7 @@
 
 
 ## Introduction
+This is my Data Centric Milestone project. 
 
 <div>
     <img src="static/wireframes/Website.JPG" href="https://pablo-cookbook.herokuapp.com" target="_blank" rel="noopener" alt="website image" aria-label="website image" />
@@ -9,7 +10,7 @@
 
 [Pablo's Cookbook](https://pablo-cookbook.herokuapp.com/)
 
-## Table of Contents
+
 
 ## UX
 
