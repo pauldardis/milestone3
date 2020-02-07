@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
 	<meta charset="UTF-8">
@@ -12,107 +12,100 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
 	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:200,300,500,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:200,300,500,700&display=swap" rel="stylesheet">
     <title>Pablo's Cookbook</title>
     <link rel="icon" type="image/png" sizes="20x20" href="{{url_for('static', filename='images/logo-100.png')}}">
 
-	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type=" text/css" />
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
 
 
 </head>
 
 
 <body>
-
 	<div class="d-flex" id="wrapper">
-
 		<!-- Sidebar -->
 		<div class="bg-light border-right" id="sidebar-wrapper">
 			<div class="sidebar-heading">Filter Recipe List </div>
-			
-
 			<div class="list-group list-group-flush">
 				<div class="list-group-item list-group-item-action bg-light">
-
 					<form action="{{url_for('search')}}" method="POST">
 						<h5 class="list-group-item-action bg-light">Course</h5>
 						<div class="form-check">
 							<label class="form-check-label" for="radio1">
-                            <input type="radio" class="" id="search" name="search_data" type="search"  value="Starter">Starter</label>
+                            <input type="radio" class="" id="radio1" name="search_data"   value="Starter">Starter</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio2">
-                            <input type="radio" class="" id="search" name="search_data" type="search"   value="Main">Main Course</label>
+                            <input type="radio" class="" id="radio2" name="search_data"    value="Main">Main Course</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label"  for="radio3">
-                            <input type="radio" class="" id="search" name="search_data" type="search"   value="Dessert">Dessert</label>
+                            <input type="radio" class="" id="radio3" name="search_data"    value="Dessert">Dessert</label>
 						</div>
 						<br>
-
 						<h5 class="list-group-item-action bg-light">Cuisine</h5>
 						<div class="form-check">
 							<label class="form-check-label" for="radio4">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="American">American</label>
+                            <input type="radio" class="" id="radio4" name="search_data"  value="American">American</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio5">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Chinese">Chinese</label>
+                            <input type="radio" class="" id="radio5" name="search_data"  value="Chinese">Chinese</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio7">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="French">French</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label" for="radio7">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Indian">Indian</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="iTALIAN">Italian</label>
+                            <input type="radio" class="" id="radio7" name="search_data" value="French">French</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio8">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Mediterranean">Mediterranean</label>
+                            <input type="radio" class="" id="radio8" name="search_data"  value="Indian">Indian</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio9">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Mexican">Mexican</label>
+                            <input type="radio" class="" id="radio9" name="search_data"  value="Italian">Italian</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio10">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Spanish">Spanish</label>
+                            <input type="radio" class="" id="radio10" name="search_data"  value="Mediterranean">Mediterranean</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio11">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Tapas">Tapas</label>
+                            <input type="radio" class="" id="radio11" name="search_data"  value="Mexican">Mexican</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio12">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Thai">Thai</label>
+                            <input type="radio" class="" id="radio12" name="search_data"  value="Spanish">Spanish</label>
 						</div>
 						<div class="form-check">
-							<label class="form-check-label"  for="radio13">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Savory">Savory</label>
+							<label class="form-check-label" for="radio13">
+                            <input type="radio" class="" id="radio13" name="search_data"  value="Tapas">Tapas</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label" for="radio14">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="None" checked>None</label>
+                            <input type="radio" class="" id="radio14" name="search_data"  value="Thai">Thai</label>
 						</div>
-
+						<div class="form-check">
+							<label class="form-check-label"  for="radio15">
+                            <input type="radio" class="" id="radio15" name="search_data"  value="Savory">Savory</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="radio16">
+                            <input type="radio" class="" id="radio16" name="search_data"  value="None" checked>None</label>
+						</div>
 						<br>
 						<h5 class="list-group-item-action bg-light">Difficulty Level</h5>
 						<div class="form-check">
-							<label class="form-check-label">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Basic">Basic</label>
+							<label class="form-check-label" for="radio17">
+                            <input type="radio" class="" id="radio17" name="search_data"  value="Basic">Basic</label>
 						</div>
 						<div class="form-check">
-							<label class="form-check-label">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Intermediate">Intermediate</label>
+							<label class="form-check-label" for="radio18">
+                            <input type="radio" class="" id="radio18" name="search_data"  value="Intermediate">Intermediate</label>
 						</div>
 						<div class="form-check">
-							<label class="form-check-label">
-                            <input type="radio" class="" id="search" name="search_data" type="search" value="Advanced">Advanced</label>
+							<label class="form-check-label" for="radio19">
+                            <input type="radio" class="" id="radio19" name="search_data" value="Advanced">Advanced</label>
 						</div>
 						<br>
 						<div>
@@ -120,8 +113,6 @@
 						</div>
 					</form>
 				</div>
-
-
 				<form class="list-group-item list-group-item-action bg-light" id="search-form"
 					action="{{url_for('search')}}" method="POST">
 					<h5 class="list-group-item-action bg-light">Text Search</h5>
@@ -134,38 +125,29 @@
 
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
-
 			<nav class="navbar navbar-expand-lg  navbar-light bg-light border-bottom">
-
-
-
-
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        			<div class="sidebar-heading"><a class="brandx"
-					href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-70.png')}}" alt=""></a>
-			</div>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        			
+                <div class="sidebar-heading"><a class="brandx"
+                        href="{{url_for('get_recipe')}}"><img src="{{url_for('static', filename='images/logo-70.png')}}" alt=""></a>
+                </div>
 
-				<div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
-					<ul class="navbar-nav justify-content-center ml-autox mt-2x mt-lg-0x">
-                    	<li class="nav-item">
-							<a class="nav-link"><button class="btn btn-info"   id="menu-toggle">Search Menu</button></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-
-
-
-
-
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav justify-content-center ml-autox mt-2x mt-lg-0x">
+                        <li class="nav-item">
+                            <a class="nav-link"><button class="btn btn-info"   id="menu-toggle">Search Menu</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('get_recipe')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
+                        </li>
+                    </ul>
+                </div>
+		    </nav>
 
 			<div class="container">
 				{% block content %} {% endblock %}
@@ -192,6 +174,8 @@
 				</div>
 				<hr>
 			</footer>
+		</div>
+	</div>
 
 
 
@@ -202,7 +186,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-			<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+			<script src="{{url_for('static', filename='js/script.js')}}"></script>
 			<script src="vendor/jquery/jquery.min.js"></script>
 			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

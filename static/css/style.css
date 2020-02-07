@@ -83,6 +83,9 @@ body {
   
 }
 
+.test {
+    height: 10px;
+}
 
 .column {
   float: left;
