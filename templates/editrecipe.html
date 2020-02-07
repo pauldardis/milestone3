@@ -19,20 +19,18 @@
 							<label >Course:</label>
 						</div>
 						<div class="col-sm-2">
-							<select type="text" name="course" id="course" class="form-box" required="required">
+							<select  name="course" id="course" class="form-box" required="required">
                                 <option value="{{recipe.course}}">{{recipe.course}}</option>
                                 <option value="Starter">Starter</option>
                                 <option value="Main">Main</option>
                                 <option value="dessert">Dessert</option>
                             </select>
 						</div>
-
-
                         <div class="col-sm-1">
                             <label >Cuisine:</label>
 						</div>
 						<div class="col-sm-2">
-                                <select type="text" name="cuisine" id="cuisine" class="form-box" required="required">
+                                <select  name="cuisine" id="cuisine" class="form-box" required="required">
                                     <option value="{{recipe.cuisine}}">{{recipe.cuisine}}</option>
                                     <option value="American">American</option>
                                     <option value="Chinese">Chinese</option>
@@ -72,7 +70,7 @@
                             <label >Difficulity:</label>
 						</div>
 						<div class="col-sm-2">
-                            <select type="text" name="difficulty_rating" id="difficulty_rating" class="form-box" required="required">
+                            <select  name="difficulty_rating" id="difficulty_rating" class="form-box" required="required">
                                     <option value="{{recipe.difficulty_rating}}">{{recipe.difficulty_rating}}</option>
                                     <option value="Basic">Basic</option>
                                     <option value="Intermediate">Intermediate</option>
@@ -105,9 +103,10 @@
 						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
 					</div>
 				</div>
+            </div>
 			<div class="">
 					<button class="btn btn-info" type="submit" name="action">Submit</button>
-					<a class="btn btn-info" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}"">Cancel</a>
+					<a class="btn btn-info" href="{{ url_for('about_recipe_details', recipe_id=recipe._id) }}">Cancel</a>
 			</div>
 		</form>
 	</div>
