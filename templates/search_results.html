@@ -6,7 +6,7 @@
 {% for recipe in results %}
 
 {% if loop.index % 2 != 0 %}
-<div class=" col-md-6 col-lg-4 col-xl-4">
+<div class=" col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
 	<div class="card recipy_card">
 		<div class="card-body">
 			<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 {% else %}
-<div class=" col-md-6 col-lg-4 col-xl-4">
+<div class=" col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
 	<div class="card recipy_card">
 		<div class="card-body">
 			<img src="{{recipe.recipe_image}}" class="card-img-top" alt="recipe image">
