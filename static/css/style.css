@@ -1,22 +1,17 @@
 
 /* Add a gray background color with some padding */
 body {
-    /* padding-top: 56px; */
-    /* font-family: Arial; */
-    /* padding: 20px; */
     background: #f1f1f1;
     font-family: 'Roboto Slab', serif;
 }
 
-.nav_colour {
-    
+.nav_colour {   
     background-color: #2EC4B6
 }
 
 .card-body {
     min-height: 260 px;
 }
-
 
 .comments_text {
     font-style: italic;
@@ -29,27 +24,12 @@ body {
 
 .fa-quote-left {
    color: #facf5a;
-  }
-
-
+}
 
 .comments_container {
-  /* background-color: #aaa; */
   width: 100%;
   padding: 20px;
 }
-
-/* .recipe_img_container {
-   display: block; 
-  margin-left: auto;
-  margin-right: auto; 
-} */
-
-/* .recipe_name {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-    } */
 
 .print_button {
     border-style: none;
@@ -58,17 +38,12 @@ body {
     padding-right: 0px;
 }
 
-
-
-
 .recipy_card {
-    /* width: 300px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 300px;
-    /* max-height: 300px; */
     height: 300px;
 }
 
@@ -79,22 +54,19 @@ body {
     bottom:0;
     margin-left: 25%;
     margin-bottom: 10px;
-    
-  
 }
 
-
 .column {
-  float: left;
-  width: 25%;
+    float: left;
+    width: 25%;
 }
 
 .recipe-details-item {
-  float: left;
-  /* width: 25%; */
+    float: left;
 }
 
 .recipe-info-text-container {
+
     display: inline-block
 }
 
@@ -108,8 +80,6 @@ body {
     display: inline-block
 }
 
-
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -117,28 +87,23 @@ body {
   clear: both;
 }
 
-
-
-
 * {
   box-sizing: border-box;
 }
-
 
 .mod-buttons{
     display: inline-block;
 }
 
-
 .recipe-details {
 display: inline-block;
 padding: 0px;
- }
-
+}
 
 .recipe-details-card {
      float: left;
  }
+
 .ingredient_details {
   margin-bottom: 12px;
   margin-top: 12px;
@@ -150,7 +115,6 @@ padding: 0px;
   margin-top: 12px;
   font-size: medium;
 }
-
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -164,13 +128,6 @@ padding: 0px;
   float: left;
   width: 25%;
   padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
 }
 
 /* Add a card effect for articles */
@@ -204,17 +161,11 @@ padding: 0px;
 }
 
 .recipy_img {
-      max-height:500px;
+    max-height:500px;
     max-width:500px;
     height:auto;
     width:auto;
-    /* display: block; 
-    margin-left: auto;
-    margin-right: auto; */
 }
-
-.form-boxxxxxxxx {
-    width: 600px;}
 
 .ingredients-form-box {
 border: none;
@@ -261,7 +212,6 @@ padding-bottom: 5px;
 .error-button {
     background-color: #facf5a;
     color: #455d7a;
-    /* display:  inline-block; */
     justify-content: center;
     font-family: 'Raleway';
 }
@@ -276,12 +226,6 @@ padding-bottom: 5px;
 .nav-link {
     font-size: 15px;
     font-weight:  bold;      
-}
-
-
-.test-box {
-    width: 100%;
-    height: 25px;
 }
 
 .form-label {
@@ -306,8 +250,7 @@ body {
 #sidebar-wrapper .sidebar-heading {
   padding: 1.8rem 1.5rem;
   padding-bottom: .45rem;
-  font-size: 1.5rem;
-   
+  font-size: 1.5rem;   
 }
 
 
