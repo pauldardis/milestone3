@@ -1,14 +1,15 @@
 
 
-## Introduction
-This is my Data Centric Milestone project. 
+## Pablos Cookbook (MS3 Project)
+This is Readme for my Data Centric Milestone project. 
+A demo of the deployed site can ge got here [Pablo's Cookbook](https://pablo-cookbook.herokuapp.com/)
 
 <div>
     <img src="static/wireframes/Website.JPG" href="https://pablo-cookbook.herokuapp.com" target="_blank" rel="noopener" alt="website image" aria-label="website image" />
 </div>
 <br>
 
-[Pablo's Cookbook](https://pablo-cookbook.herokuapp.com/)
+
 
 
 
