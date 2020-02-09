@@ -1,8 +1,8 @@
 
 
-## Pablos Cookbook (MS3 Project)
+## Pablo’s Cookbook (MS3 Project)
 This is Readme for my Data Centric Milestone project. 
-A demo of the deployed site can ge got here [Pablo's Cookbook](https://pablo-cookbook.herokuapp.com/)
+A demo of the deployed site can be got here [Pablo's Cookbook](https://pablo-cookbook.herokuapp.com/)
 
 <div>
     <img src="static/wireframes/Website.JPG" href="https://pablo-cookbook.herokuapp.com" target="_blank" rel="noopener" alt="website image" aria-label="website image" />
@@ -82,7 +82,7 @@ This page allows a user to edit recipe data that has been submitted. They can ch
 
 This allows a user to delete a recipe, it initially displays a modal with a waring and it asks the user to confirm that they want to delete the recipe, the user also has an option to cancel the request and return to the recipe.
 
-For the purposes of this project I have displayed the following text in the modal _“Hi this is a test website which is being graded please do not maliciously delete any recipie”_ This is because there is no user authentication requirement needed for this project, user authentication is part of the full stack project (this approach has been validated and agreed with by Code Institute)
+For the purposes of this project I have displayed the following text in the modal _“Hi this is a test website which is being graded please do not maliciously delete any recipe”_ This is because there is no user authentication requirement needed for this project, user authentication is part of the full stack project (this approach has been validated and agreed with by Code Institute)
 
 ### Recipe Comment
 
@@ -162,9 +162,9 @@ The following resources were used to test the website
 HTML -  W3 HTML Validator
 CSS -   W3 CSS Validator
 
-Google Chrome developer tools were used to thest the responsivenness of the website. 
+Google Chrome developer tools were used to test the responsiveness of the website.  
 
-All recipe forms were tested for user imput by adding, updating, deleting, searching, or inserting a comment. 
+All recipe forms were tested for user input by adding, updating, deleting, searching, or inserting a comment. 
 
 ## Deployment
 
@@ -195,7 +195,7 @@ echo web: python app.py > Procfile
 
 4.	Create a new app on Heroku website by clicking “New” give it a name and assign it to you nearest region USA or Europe.
 
-5. From the Heroku dashboard select GitHop as the Deployment method
+5. From the Heroku dashboard select GitHub as the Deployment method
 
 6. Link the Heroku app to the correct GitHub repository.
 
