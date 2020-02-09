@@ -32,6 +32,9 @@ The purpose of this website to view, add, edit and comment of recipes, the typic
 
 ### Wireframes
 
+#### Main Page full screen
+![Main page full screen](static/wireframes/Main_page_full_screen.png)
+
 Insert Drawings here
 
 ## Features
