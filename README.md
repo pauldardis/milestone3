@@ -35,7 +35,27 @@ The purpose of this website to view, add, edit and comment of recipes, the typic
 #### Main Page full screen
 ![Main page full screen](static/wireframes/Main_page_full_screen.png)
 
-Insert Drawings here
+#### Main Page mobile
+![Main page full screen](static/wireframes/Main_page_mobile.png)
+
+#### Recipe Page full screen
+![Main page full screen](static/wireframes/Recipe_Full_Screen.png)
+
+#### Recipe Page full mobile
+![Main page full screen](static/wireframes/Recipe_Mobile.png)
+
+#### Edit recipe  full screen
+![Main page full screen](static/wireframes/Recipe_edit_form_full_screen.png)
+
+#### Edit recipe full screen
+![Main page full screen](static/wireframes/Recipe_edit_form_mobile.png)
+
+#### Add recipe  full screen
+![Main page full screen](static/wireframes/Recipe_add_form_full_screen.png)
+
+#### Add recipe full screen
+![Main page full screen](static/wireframes/Recipe_add_form_mobile.png)
+
 
 ## Features
 
