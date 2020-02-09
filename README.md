@@ -158,6 +158,14 @@ Flask: Used to construct and render pages
 
 ## Testing
 
+The following resources were used to test the website 
+HTML -  W3 HTML Validator
+CSS -   W3 CSS Validator
+
+Google Chrome developer tools were used to thest the responsivenness of the website. 
+
+All recipe forms were tested for user imput by adding, updating, deleting, searching, or inserting a comment. 
+
 ## Deployment
 
 ### How to run locally
