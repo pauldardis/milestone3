@@ -61,8 +61,6 @@ def insert_recipe():
     return redirect(url_for('get_recipe'))
 
 
-
-
 @app.route('/search', methods=['POST','GET'])
 def search():
     orig_query = request.form.get('search_data')      
@@ -78,17 +76,6 @@ def search():
         ]
     })
     return render_template('search_results.html', query=orig_query, results=results)
-
-
-
-
-
-
-
-
-
-
-
 
 
 @app.route('/edit_recipe/<recipe_id>')
@@ -137,13 +124,6 @@ def insert_comment(recipe_id):
                     ))
 
    
-
-
-
-
-
-
-
 # Error Page Section
 
 @app.errorhandler(404)
@@ -158,9 +138,6 @@ def not_found(error):
 @app.errorhandler(500)
 def not_found(error):
     return render_template("500.html")
-
-
-
 
 
 if __name__ == '__main__':
