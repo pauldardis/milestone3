@@ -167,6 +167,27 @@ Click on Add Recipe in Navbar
 3. Fill out full recipe and clit submit, check to see that recipe is displayed in main page at bottom. 
 4. Click cancel check that you return to last page you had visited. 
 
+#### Edit Recipe. 
+Pick a recipe and the select Edit. 
+1. Add an extra ingredient and click Submit, check that you return to the recipe main page and that the extra ingredient was inserted, 
+2. Check can you remove an ingredient or instruction 
+3. Change name and then click cancel and check to see if you return to the recipe main page and the recipe is unchanged 
+
+#### Delete Recipe. 
+Pick a recipe and the select Delete. 
+1. Check that a modal appears and gives you a warning. 
+2. Check if you hit cancel do you return to main recipe page and the recipe is unchanged. 
+3. Check if you hit delete on modal do you return to main site page. 
+4. Check Mongodb database that all comments for that recipe are deleted 
+
+#### Search Recipe. 
+Using the search filter check it displays recipes correctly when filters are applied for Course, Cuisine, Dificulity Level and also Text Search 
+
+#### Comments Testing. 
+Add a comment to a recipe. 
+1. Check that the comment is added and displayed in the correctly location, Right-hand side on full screed and at the bottom of the page on mobile and tablets. 
+2. Check that that the message “Your comment has been recorded” is displayed at the bottom of the comments section 
+
 
 
 ## Deployment
