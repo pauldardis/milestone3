@@ -85,7 +85,7 @@
 					<div class="form-group col-12">
 						<h2>Ingredients</h2>
 						{% for ingredient in recipe.ingredients %}
-						<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=8>
+						<input type="text" class="form-control " name="ingredient" id="ingredient" placeholder="{{ingredient}}" value="{{ingredient}}" minlength=1>
                         {% endfor %}
 						<button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
 						<button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
@@ -97,7 +97,7 @@
 					<div class="form-group col-12">
 						<h2>Instructions</h2>
 						{% for method_step in recipe.method_steps %}
-						<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=8>
+						<input type="text" class="form-control " name="method_step" id="method_step" placeholder="{{method_step}}" value="{{method_step}}" minlength=1>
                         {% endfor %}
 						<button type="button" class="new-method-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i></button>
 						<button type="button" class="remove-method-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i></button>
