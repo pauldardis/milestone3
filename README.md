@@ -152,8 +152,10 @@ Flask: Used to construct and render pages
 
 ## Testing
 
-The following resources were used to test the website 
+The following resources were used to test the website.
+
 HTML -  W3 HTML Validator
+
 CSS -   W3 CSS Validator
 
 Google Chrome developer tools were used to test the responsiveness of the website.  Each page was tested for responsiveness across several mobile, tablet and full screen devices, all pages recited well and no issues were found. 
