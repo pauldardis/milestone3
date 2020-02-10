@@ -10,16 +10,18 @@ app.config["MONGO_DBNAME"] = os.environ.get('DATABASE')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 mongo = PyMongo(app)
+mongo = PyMongo(app)
 
 
 @app.route('/')
+#this route displays all recipes
 @app.route('/get_recipe')
 def get_recipe():
     return render_template("index.html", 
                             recipe_data=mongo.db.recipe_data.find())
 
 
-
+#This route displays an single recipe 
 @app.route('/get_recipe/<recipe_id>')
 def about_recipe_details(recipe_id):
     the_comments = mongo.db.comments_data.find({"recipe_id": ObjectId(recipe_id)})
@@ -28,12 +30,15 @@ def about_recipe_details(recipe_id):
     return render_template('recipe_details.html', recipe=the_recipe, comments=the_comments)
 
 
+# Route for add recipe 
 @app.route('/add_recipe')
 def add_recipe():
     return render_template ('addrecipe.html', 
                             categories=mongo.db.recipe_data.find())
 
 
+
+# Route for insert recipe
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipe_data = mongo.db.recipe_data
@@ -52,6 +57,7 @@ def insert_recipe():
     return redirect(url_for('get_recipe'))
 
 
+# This route is used for all search filters 
 @app.route('/search', methods=['POST','GET'])
 def search():
     orig_query = request.form.get('search_data')      
@@ -69,12 +75,13 @@ def search():
     return render_template('search_results.html', query=orig_query, results=results)
 
 
+#This route displays the edit recipe page
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe =  mongo.db.recipe_data.find_one({"_id": ObjectId(recipe_id)})
-    all_categories =  mongo.db.categories.find()
-    return render_template('editrecipe.html', recipe=the_recipe, categories=all_categories)
+    return render_template('editrecipe.html', recipe=the_recipe, )
 
+#This route displays the updates the recipe data in Mongodb and returns you to the recipe page
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipe_data = mongo.db.recipe_data
@@ -94,6 +101,7 @@ def update_recipe(recipe_id):
                     recipe_id=recipe_id
                     ))
 
+#This route deletes the recipe data and all comments for the recipe. 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.comments_data.remove({"recipe_id": ObjectId(recipe_id)})
@@ -101,7 +109,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for('get_recipe'))
 
 
-
+#This route inserts the comment into the database using the recipe_id as a key
 @app.route('/insert_comment/<recipe_id>', methods=["POST",'GET'])
 def insert_comment(recipe_id):
     comments = mongo.db.comments_data
