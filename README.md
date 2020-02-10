@@ -162,14 +162,10 @@ Google Chrome developer tools were used to test the responsiveness of the websit
 
 #### Add Recipe
 Click on Add Recipe in Navbar 
-
-Test 1.	Click submit without filling out form, error message should be display to fill out required field 
-
-Test 2.	Put text into Image Link section and click submit, error message should be displayed the format should be URL.
-
-Test 3. Fill out full recipe and clit submit, check to see that recipe is displayed in main page at bottom. 
-
-Test 4. Click cancel check that you return to last page you had visited. 
+1.	Click submit without filling out form, error message should be display to fill out required field 
+2.	Put text into Image Link section and click submit, error message should be displayed the format should be URL.
+3. Fill out full recipe and clit submit, check to see that recipe is displayed in main page at bottom. 
+4. Click cancel check that you return to last page you had visited. 
 
 
 
