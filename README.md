@@ -21,10 +21,10 @@ The purpose of this website to view, add, edit and comment of recipes, the typic
 
 ### User Stories
 
- - As a website user I would the ability to be able to add a recipe
- - As a website user I would the ability to be able to edit a recipe
- - As a website user I would the ability to be able to delete a recipe.
- - As a website user I would the ability to search for a recipe using a key word.
+ - As a website user I would like the ability to be able to add a recipe
+ - As a website user I would like the ability to be able to edit a recipe
+ - As a website user I would like the ability to be able to delete a recipe.
+ - As a website user I would like the ability to search for a recipe using a key word.
  - As a website user I would like the ability to filter recipes by Course type or by Cuisine.
  - As a website user I would like the ability to view all recipes
  - As a website user I would like the ability to easily print a recipe.
@@ -33,29 +33,15 @@ The purpose of this website to view, add, edit and comment of recipes, the typic
 
 ### Wireframes
 
-#### Main Page full screen
-![Main page full screen](static/wireframes/Main_page_full_screen.png)
 
-#### Main Page mobile
-![Main page full screen](static/wireframes/Main_page_mobile.png)
-
-#### Recipe Page full screen
-![Main page full screen](static/wireframes/Recipe_Full_Screen.png)
-
-#### Recipe Page full mobile
-![Main page full screen](static/wireframes/Recipe_Mobile.png)
-
-#### Edit recipe  full screen
-![Main page full screen](static/wireframes/Recipe_edit_form_full_screen.png)
-
-#### Edit recipe full screen
-![Main page full screen](static/wireframes/Recipe_edit_form_mobile.png)
-
-#### Add recipe  full screen
-![Main page full screen](static/wireframes/Recipe_add_form_full_screen.png)
-
-#### Add recipe full screen
-![Main page full screen](static/wireframes/Recipe_add_form_mobile.png)
+[Main page full screen](static/wireframes/Main_page_full_screen.png)
+[Main page mobile screen](static/wireframes/Main_page_mobile.png)
+[Recipe Page full screen](static/wireframes/Recipe_Full_Screen.png)
+[Recipe Page mobile screen](static/wireframes/Recipe_Mobile.png)
+[Edit recipe  full screen](static/wireframes/Recipe_edit_form_full_screen.png)
+[Edit recipe mobile screen](static/wireframes/Recipe_edit_form_mobile.png)
+[Add recipe  full screen](static/wireframes/Recipe_add_form_full_screen.png)
+[Add recipe  mobile screen](static/wireframes/Recipe_add_form_mobile.png)
 
 
 ## Features
