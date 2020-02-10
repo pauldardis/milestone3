@@ -156,9 +156,18 @@ The following resources were used to test the website
 HTML -  W3 HTML Validator
 CSS -   W3 CSS Validator
 
-Google Chrome developer tools were used to test the responsiveness of the website.  
+Google Chrome developer tools were used to test the responsiveness of the website.  Each page was tested for responsiveness across several mobile, tablet and full screen devices, all pages recited well and no issues were found. 
 
-All recipe forms were tested for user input by adding, updating, deleting, searching, or inserting a comment. 
+### Manual testing
+
+#### Add Recipe
+Click on Add Recipe in Navbar 
+Test 1.	Click submit without filling out form, error message should be display to fill out required field 
+Test 2.	Put text into Image Link section and click submit, error message should be displayed the format should be URL.
+Test 3. Fill out full recipe and clit submit, check to see that recipe is displayed in main page at bottom. 
+Test 4. Click cancel check that you return to last page you had visited. 
+
+
 
 ## Deployment
 
