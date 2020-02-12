@@ -203,9 +203,13 @@ Add a comment to a recipe.
 pip3 –r requirements.txt
 4.	In your local IDE create a file called env.py. Inside the env.py file create a SECRET_KEY and a MONGO_URI to link to your own database
 Example
-import os
-SECRET_KEY = _'your_secret_'
-mongo_uri = mongodb+srv://root:<password>@myfirstcluster-vcoqj.mongodb.net/test?retryWrites=true&w=majority
+
+os.environ["SECRET_KEY"] = 'your_secret'
+
+os.environ["MONGO_URI"] = 'mongodb+srv://root:<password>@myfirstcluster-vcoqj.mongodb.net/test?retryWrites=true&w=majority'
+
+os.environ["MONGO_DBNAME"]  ="myFirstCluster"
+
 
 5.	Please make sure that you call your database cook_book and you have 2 collections called recipe_data and comments_data. You will find examples of the structure for these collections in the Database section of this Readme.
 6.	You can now run the application in your IDE terminal window with the command
