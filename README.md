@@ -202,6 +202,7 @@ Add a comment to a recipe.
 3.	Install all required modules with the command
 pip3 –r requirements.txt
 4.	In your local IDE create a file called env.py. Inside the env.py file create a SECRET_KEY and a MONGO_URI to link to your own database
+
 Example
 
 os.environ["SECRET_KEY"] = 'your_secret'
